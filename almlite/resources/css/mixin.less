@@ -1,0 +1,106 @@
+.toggle_filter_panel{
+	max-height: 0;
+	overflow: hidden;
+	-moz-animation:4s ease 2s normal forwards 1 running slide_down;
+	-webkit-animation:4s ease 2s normal forwards 1 running slide_down;
+	-o-animation:4s ease 2s normal forwards 1 running slide_down;
+	-ms-animation:4s ease 2s normal forwards 1 running slide_down;
+	animation: 4s ease 2s normal forwards 1 running slide_down;
+	
+}
+/* Firefox */
+@-moz-keyframes slide_down {
+	from {max-height: 0;}
+	to {max-height: 2000px;}
+}
+ /* Safari and Chrome */
+@-webkit-keyframes slide_down{
+	from {max-height: 0;}
+	to {max-height: 2000px;}
+}
+/* Opera */
+@-o-keyframes slide_down{
+	from {max-height: 0;}
+	to {max-height: 2000px;}
+}
+/* IE10 */
+@-ms-keyframes slide_down{
+	from {max-height: 0;}
+	to {max--height: 2000px;}
+}
+@keyframes slide_down{
+	from {max-height: 0;}
+	to {max-height: 2000px;}
+}
+.toggle_filter_panel_up{
+	max-height: 2000px;
+	overflow: hidden;
+   -moz-animation:slide_up 1s ease 0s forwards;
+   -webkit-animation:slide_up 1s ease 0s forwards;
+   -o-animation:slide_up 1s ease 0s forwards;
+   -ms-animation:slide_up 1s ease 0s forwards;
+	animation:slide_up 1s ease 0s forwards;
+}
+/* Firefox */
+@-moz-keyframes slide_up {
+	from {max-height: 2000px;}
+	to {max-height: 0;}
+}
+ /* Safari and Chrome */
+@-webkit-keyframes slide_up{
+	from {max-height: 2000px;}
+	to {max-height: 0;}
+}
+/* Opera */
+@-o-keyframes slide_up{
+	from {max-height: 2000px;}
+	to {max-height: 0;}
+}
+/* IE10 */
+@-ms-keyframes slide_up{
+	from {max-height: 2000px;}
+	to {max-height: 0;}
+}
+@keyframes slide_up{
+	from {max-height: 2000px;}
+	to {max-height: 0;}
+}
+
+
+/* Firefox */
+@-moz-keyframes slide_left {
+	from {width: 50%;}
+	to {min-width: 100%;}
+}
+ /* Safari and Chrome */
+@-webkit-keyframes slide_left{
+	from {width: 50%;}
+	to {min-width: 100%;}
+}
+/* Opera */
+@-o-keyframes slide_left{
+	from {width: 50%;}
+	to {min-width: 100%;}
+}
+/* IE10 */
+@-ms-keyframes slide_left{
+	from {width: 50%;}
+	to {min-width: 100%;}
+}
+@keyframes slide_left{
+	from {width: 50%;}
+	to {min-width: 100%;}
+}
+.slideleft_panel{
+	max-width: 100%;
+	overflow: hidden;
+   -moz-animation:slide_left .5s ease 0s forwards;
+   -webkit-animation:slide_left .5s ease 0s forwards;
+   -o-animation:slide_left .5s ease 0s forwards;
+   -ms-animation:slide_left .5s ease 0s forwards;
+	animation:slide_left .5s ease 0s forwards;
+}
+
+	
+
+		

@@ -1,0 +1,162 @@
+/****** Chat window *******/
+.chat_window{
+	position: fixed;
+	right: 0;
+	top: 0;
+	left:100%;
+	margin-top:50px;
+	min-width: 350px;
+	border-left:2px solid #b7b9b9;
+	border-bottom:2px solid #b7b9b9;
+	background: #edf0f0;
+	bottom: 0;
+	.open_chat_panel{
+		background:#ffffff;
+		padding:5px;
+		position:absolute;
+		left: -39px;
+		top:45%;
+		font-size:26px;
+		border:1px solid #ccc;
+		text-decoration:none;
+		cursor:pointer;
+	}
+	.chat_container{
+		padding-left:15px;
+	}
+	/****** white container *******/
+	.white_chat_box{
+		background:@chat-white-box;
+		.member_count{
+			padding:10px 15px;
+			.count{
+				font-weight:700;
+				font-size:12px;
+				padding-bottom:10px;
+			}
+		}
+		/****** white container navbar*******/
+		.chat_box_navbar{
+			ul{
+				border-bottom: 1px solid @row-border;
+				border-top: 1px solid @row-border;
+				padding:10px 0 0 0;
+				li{
+					display:inline-block;
+					margin-left:15px;
+
+					a{
+						text-decoration:none;
+						font-size:12px;
+						padding:0;
+						color:@chat-window-tab-link;
+						cursor:pointer;
+						display:block;
+						padding-bottom:10px;
+					}
+				}
+				li.active a {
+					color: #00929c;
+					border: 0;
+					border-bottom: 2px solid #00929c;
+					font-weight: 700;
+					background: 0 0;
+					
+				}
+
+			}
+		}
+		/******end of  white container navbar*******/
+		/****** comment lists*******/
+		.comment_list{
+			overflow-y: scroll;
+			.chat_comment{
+				margin-top:20px;
+				h2{
+					font-weight:400;
+					padding-left: 15px;
+				}
+				.comment_box{
+					margin-top:5px;
+					padding:10px 10px;
+					margin-left:12px;
+					border:1px solid @row-border;
+					position: relative;
+					border-radius: 0px;
+					.name{
+						font-weight:700;
+						font-size:12px;
+					}
+					.date{
+						padding-right:8px;
+						color:#b3b5b1;
+					}
+					.comment{
+						p{
+							padding:5px 0px 0px 0px;
+						}
+					}
+				}
+				.comment_box:before {
+					content: "";
+					position: absolute;
+					bottom: -12px;
+					left: 265px;
+					border-width: 12px 0 0 14px;
+					border-style: solid;
+					border-color:  @row-border transparent;
+					display: block;
+					width: 16px;
+				}
+				.comment_box:after{
+					content: "";
+					position: absolute;
+					bottom: -12px;
+					left: 266px;
+					border-width: 12px 0 0 14px;
+					border-style: solid;
+					border-color: #ffffff transparent;
+					display: block;
+					width: 0;
+				}
+				.left_arrow.comment_box:before {
+					bottom: -14px;
+					border-width: 14px 17px 0 0;
+					left:30px;
+				}
+				.left_arrow.comment_box:after{
+					border-width: 12px 14px 0 0;
+					left:31px;
+				}
+				.gray_comment_box{
+					background:#f3f2fe;
+				}
+				.gray_comment_box:after{
+					border-color: #f3f2fe transparent;
+				}
+			}
+		}
+		/****** end of comment lists*******/
+	}
+	/****** end white container *******/
+	.add_comment{
+		margin:0;
+		border-top:1px solid @row-border;
+		.textfield{
+			margin-top: 15px;
+			margin-left: 10px;
+			width: 260px;
+			border-radius:0;
+			display:inline-block;
+		}
+		.attachment{
+			position: absolute;
+			margin-left: 10px;
+			margin-top: 18px;
+			font-size: 24px;
+			text-decoration:none;
+			color:@icons-color;
+		}
+	}	
+}
+/****** end of Chat window *******/

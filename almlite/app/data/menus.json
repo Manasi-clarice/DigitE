@@ -1,0 +1,101 @@
+{
+	"menus": [{
+		"className": "mainmenu",
+		"ulClassName": "sections",
+		
+		"menuItems": [{
+			"className": "icon-Workspace",
+			"text": "Workspace"
+		},{
+			"className": "icon-Home",
+			"text": "Home"
+		},{
+			"className": "icon-Portfolio",
+			"text": "Portfolio"
+		},{
+			"className": "icon-ProcessGovernance",
+			"text": "Process Governance"
+		},{
+			"className": "icon-Digite",
+			"text": "Digite"
+		},{
+			"className": "icon-ResourceManagement",
+			"text": "Resource Management"
+		},{
+			"className": "icon-Administration",
+			"text": "Administration"
+		}]
+	},{
+		"className": "",
+		"ulClassName": "",
+		
+		"menuItems": [{
+			"className": "icon-Dashboard",
+			"text": "Dashboard"
+		},{
+			"className": "",
+			"text": "Saturn Phase 1"
+		},{
+			"className": "",
+			"text": "Mecury Mentainence 01"
+		},{
+			"className": "",
+			"text": "Project Columbus SA"
+		},{
+			"className": "",
+			"text": "Marketing Intranet _P2"
+		},{
+			"className": "",
+			"text": "Mecury Mentainence 02"
+		},{
+			"className": "",
+			"text": "Select All"
+		}]
+	},{
+		"className": "",
+		"ulClassName": "",
+		
+		"menuItems": [{
+			"className": "icon-Projects",
+			"text": "Projects"
+		},{
+			"className": "",
+			"text": "Digit UX"
+		},{
+			"className": "",
+			"text": "Digite Maintenance"
+		},{
+			"className": "",
+			"text": "Project Name 4"
+		},{
+			"className": "",
+			"text": "Project Name 5"
+		},{
+			"className": "",
+			"text": "Select All"
+		}]
+	},{
+		"className": "",
+		"ulClassName": "",
+		
+		"menuItems": [{
+			"className": "icon-Help",
+			"text": "Help"
+		},{
+			"className": "",
+			"text": "Help Topic"
+		},{
+			"className": "",
+			"text": "Contextual Help"
+		},{
+			"className": "",
+			"text": "About"
+		},{
+			"className": "",
+			"text": "Support"
+		},{
+			"className": "",
+			"text": "Select All"
+		}]
+	}]
+}

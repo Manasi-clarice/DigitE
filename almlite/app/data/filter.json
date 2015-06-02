@@ -1,0 +1,120 @@
+{
+	"ulClassName": ""
+	"filters": [{
+		"filterId": "priorityFilter",
+		"text": "Priority",
+		"dataFor": "priority",
+		"summaryItems": [{
+			"count": 37,
+			"text": "Defects"
+		},{
+			"count": 18,
+			"text": "Issues"
+		},{
+			"count": 34,
+			"text": "Action Items"
+		},{
+			"count": 03,
+			"text": "Tasks"
+		},{
+			"count": 20,
+			"text": "Others"
+		}]
+	},{
+		"filterId": "dueDateFilter",
+		"text": "Due Date",
+		"summaryItems": [{
+			"count": 23,
+			"text": "Defects"
+		},{
+			"count": 34,
+			"text": "Issues"
+		},{
+			"count": 56,
+			"text": "Action Items"
+		},{
+			"count": 67,
+			"text": "Tasks"
+		},{
+			"count": 77,
+			"text": "Others"
+		}]
+	},{
+		"filterId": "dateIdentifiedFilter",
+		"text": "Date Identified",
+		"summaryItems": [{
+			"count": 56,
+			"text": "Defects"
+		},{
+			"count": 78,
+			"text": "Issues"
+		},{
+			"count": 56,
+			"text": "Action Items"
+		},{
+			"count": 67,
+			"text": "Tasks"
+		},{
+			"count": 98,
+			"text": "Others"
+		}]
+	},{
+		"filterId": "projectFilter",
+		"text": "Project",
+		"summaryItems": [{
+			"count": 87,
+			"text": "Defects"
+		},{
+			"count": 76,
+			"text": "Issues"
+		},{
+			"count": 65,
+			"text": "Action Items"
+		},{
+			"count": 65,
+			"text": "Tasks"
+		},{
+			"count": 65,
+			"text": "Others"
+		}]
+	},{
+		"filterId": "queueFilter",
+		"text": "Queue Filter",
+		"summaryItems": [{
+			"count": 65,
+			"text": "Defects"
+		},{
+			"count": 45,
+			"text": "Issues"
+		},{
+			"count": 34,
+			"text": "Action Items"
+		},{
+			"count": 23,
+			"text": "Tasks"
+		},{
+			"count": 73,
+			"text": "Others"
+		}]
+	},{
+		"filterId": "itemTypeFilter",
+		"text": "Item Type",
+		"summaryItems": [{
+			"count": 37,
+			"text": "Defects"
+		},{
+			"count": 18,
+			"text": "Issues"
+		},{
+			"count": 34,
+			"text": "Action Items"
+		},{
+			"count": 03,
+			"text": "Tasks"
+		},{
+			"count": 20,
+			"text": "Others"
+		}]
+	}]
+	
+}

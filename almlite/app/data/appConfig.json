@@ -1,0 +1,26 @@
+{
+	"loggedInUser" : {
+		"userId": 85,
+		"loginId": "piyush",
+		"firstName": "Piyush",
+		"lastName": "Mistry",
+		"emailId": "alalit@digite.com"
+	},
+	
+	"preference": {
+		"localeText": "en_US",
+		"localeNumber": "en_US",
+		"localeDate": "en_US",
+		"dateFormat": "dd-MMM-yyyy"
+	},
+	
+	"URLs": {
+		"homeURL": "/almlite/index.jsp",
+		"menusURL": "/almlite/app/data/menus.json",
+		"inboxURL": ""
+	},
+	
+	"I18N": {
+		
+	}
+}

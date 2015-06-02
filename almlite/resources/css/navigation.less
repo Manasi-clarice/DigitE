@@ -1,0 +1,315 @@
+/***************Navigation bar css********************************/
+.navbar-inverse{
+	background:@top-menu-bar;
+	border:0;
+	border-radius:0;
+	color:#000;
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+	
+	.navbar-brand{
+      padding: 6px 10px;
+	}
+	.navbar-nav{
+		li{
+			a{
+				font-size:25px;
+				padding:15px 10px;
+			}
+			a:hover{
+				background: @active-nav-link;	
+			}
+			a.icon-Search:hover{
+				//background:white;	
+			}
+			.badge{
+				position:absolute;
+				top:7px;
+				left: 22px;
+				background:@notification-badge;
+				border-color:@notification-badge-border;
+                padding: 0;
+                font-size: 11px;
+                width: 16px;
+                height: 16px;
+                border-radius: 8px;
+                line-height: 17px;
+			}
+			
+			.icon-MinimizeWindow{
+				font-size:24px;
+			}
+		}
+		li.active{
+			a{
+				background: none;
+			}
+			a:hover{
+				background: @active-nav-link;	
+			}
+		}
+		.open{
+			a{background:@active-nav-link;}
+			a:hover{background: @active-nav-link;}
+			a:focus{background: @active-nav-link;}
+			a:active{background: @active-nav-link;}
+			.main_menu_dropdown{
+				display: block;
+				position: absolute;
+				top: 50px;
+				left: -445px;
+				z-index: 3;
+				border:0;
+			}
+		}
+		.search_box{
+			.inputbox{
+				display:none;
+				float:left;
+			}
+			.inputbox:focus{
+				display:inline-block;
+			}
+			.icon-Search{
+				float:left;
+			}
+		}
+		/********************Search box navbar***********************/
+		.search_box.active{
+			.inputbox{
+				display:block;
+				opacity: 1;
+			}
+		}
+		.search_box:hover .inputbox{
+			display:block;
+		}
+		
+		.inputbox{
+			top: 8px;
+			height: 30px;
+			position:relative;
+			
+			input[type="text"]{
+				background: white;
+				border-radius: 0;
+				height: 32px;
+				width: 265px;
+				border:0;
+				border:1px solid @row-border;
+				border-right: 0;
+				
+			}
+		}
+		/********************end of Search box navbar***********************/
+		/******************same as PSD*********************
+		.inputbox+li{
+			border: 1px solid @row-border;
+			background: white;
+			height: 32px;
+			top: 8px;
+			margin-left: 0px;
+			border-left: 0;
+			a{
+				color:@brand-color;
+				padding: 6px 6px 0 6px;
+				
+			}
+		}
+		*/
+	}
+	.userinformation{
+		li{
+			a{
+				font-size:14px;
+				padding-top:12px;
+				padding-bottom:12px;
+				color:@main-nav-a;
+				.icon-caret{
+					font-size:11px;
+					margin-left:10px;
+				}
+				.userphoto{
+					width: 26px;
+					height: 26px;
+					border-radius:50%;
+				}
+			}
+			a.icon-Minimize{
+				font-size:20px;
+				padding:15px 5px;
+			}
+
+		}
+		.dropdown-menu{
+			padding-top:0;
+			padding-bottom:0;
+			width: 100%;
+
+			li{
+				a{
+					padding:10px;
+				}
+				&:hover{
+					a{
+						background:@main-menu-hover;
+					}
+				}
+			}
+
+		}
+
+		.icon-minimize{
+			font-size:30px;
+			padding:20px 0;
+		}
+	}
+	/*************main menu*********************/
+	.main_menu_dropdown{
+		background: @main-menu-background;
+		padding:0;
+		.mainmenu{
+			background:@mainmenu-background;
+		}
+		ul.menu_items{
+			list-style:none;
+			padding: 0 0 0 5px;
+			li{
+				
+				a{
+					padding:10px 5px 10px 20px;
+					display:block;
+					font-size:14px;
+					color:@main-nav-a;
+					text-decoration:none;
+
+					[class^="icon-"], [class*=" icon-"]{
+						font-size:24px;
+					}
+				}
+				a:hover{
+					background:@main-menu-hover;
+				}
+			}
+			li:hover{
+				background:@main-menu-hover;
+				a{
+					background:@main-menu-hover;
+				}
+			}
+			li:before {
+			    content: "";
+			    width: 5px;
+			    height: 5px;
+			    background-color: @bullet-color;
+			    top: 21px;
+			    left:10px;
+				position: relative;
+				display: block;
+			}
+			li:first-child:before {
+			    content: "";
+			    width: 0px;
+			    height: 0px;
+			    background-color: @bullet-color;
+			    float: left;
+			    top: 0px;
+				position: relative;
+				display: block;
+			}
+			li:last-child {
+				border-top: 1px solid @menu-title-border;
+				a{
+					color: @selectall;	
+				}
+			}
+			li:last-child:before {
+				content: "";
+			    width: 0px;
+			    height: 0px;
+			    background-color: @bullet-color;
+			    float: left;
+			    top: 0px;
+				position: relative;
+				display: block;
+
+			}
+			li:first-child{
+				padding-left: 0px;
+				border-bottom:1px solid @menu-title-border;
+				a{
+					font-size: 22px;
+					font-weight:300;
+					padding:10px 0;
+
+					span{
+						margin-right:10px;
+					}
+				}
+				a:hover{
+					background:none;
+					cursor:default;
+				}
+			}
+			li:first-child:hover{
+				background:none;
+			}
+
+		}
+		ul.menu_items.sections{
+			margin:0;
+			padding:0;
+			li{
+				list-style:none;
+				padding-left: 0px;
+				background:none;
+				a{
+					padding:10px 0;
+					background:none;
+					span{
+						margin-right:10px;
+						position:relative;
+						top:5px;
+					}
+				}
+			}
+			li:hover{
+				background:@main-menu-hover;
+				a{
+					background:@main-menu-hover;
+				}
+				}
+			li:first-child:hover {
+				background: none; 
+				a:hover{
+					background:none;
+				}
+			}
+			li:last-child {
+				border-top:0;
+				a{
+					color: @main-nav-a;	
+				}
+			}
+			li:before {
+			    content: "";
+			    width: 0px;
+			    height: 0px;
+			    background-color: @bullet-color;
+			    float: left;
+			    top: 0px;
+				position: relative;
+				display: block;
+			}
+		}
+	}
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text{
+	color: #ffffff;
+}
+
+
+

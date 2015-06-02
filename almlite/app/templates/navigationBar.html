@@ -1,0 +1,160 @@
+<nav class="navbar navbar-inverse">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">
+				<img src="almlite/assets/images/logo.png" alt="Digite">
+			</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<div class="main_nav_bar">
+				<ul class="nav navbar-nav">
+					<li id="homeIcon" class="active"><a href="index.html" class="icon-Home" ></a></li>
+					<li id="menuIcon" class="dropdown">
+						<a href="#about" class="icon-Menu dropdown-toggle js-activated" data-toggle="dropdown" data-hover="dropdown" role="button" aria-expanded="false"></a>
+						<div class="dropdown-menu main_menu_dropdown " role="menu">
+							<div id="menuContainer" class="container"></div>
+						</div>
+					</li>
+					<li id="searchIcon" class="search_box">
+						<span class="inputbox">
+							<input type="text" placeholder="Search Project Name">
+						</span>
+						<a href="#contact" class="icon-Search"></a>
+					</li>
+					<li id="notificationIcon"><a href="#contact" class="icon-Notification"></a></li>
+				</ul>
+			</div>
+			<div class="">
+				<ul class="nav navbar-nav userinformation pull-right">
+					<li id="userInfoIcon" class="dropdown">
+						<a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" data-hover="dropdown" aria-expanded="false">
+							<img class="userphoto" src="almlite/assets/images/user5.gif" alt="User Name Here" />
+							Rajesh Sharma 
+							<span class="icon-Down-Arrow"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="icons icon-Minimize"></a></li>
+				</ul>
+			</div>
+		</div><!--/.nav-collapse -->
+	</div>
+	<!--Result when we click on search button of navbar-->  
+	<div class="search_result_panel">
+		<div class="search_result container_class">
+			<div class="search_result_list">
+				<div class="row row_border">
+					<div class="col-md-2">
+						<div class="work-item-stat" data-icon="circle-icon icon-defect"  data-dimension="40" data-text="" data-info="Defect" data-width="5" data-fontsize="12" data-percent="55" data-fgcolor="#6dbc26" data-bgcolor="#d5d5d5" data-fill="#edf0f0"></div>
+					</div>
+					<div class="col-md-4">
+						<div class="work_item_title" title="<div class='clearfix'><div class='status_counts pull-left'><div class='status_count active'><h4>12</h4><p>Defects</p></div><div class='status_count active'><h4>10</h4><p>Defects</p></div></div><div class='pull-right'><div class='last_status_count '><p>added in last 1 hour</p></div></div>" data-html="true" rel="tooltip">
+							<div class="heading" onclick="show_inline_pannel(this);" ><span class="icons icon-Open"></span> Monthly PSR not loading </div>
+						</div>
+						<div class="hashtag_items">
+							<ul class="clearfix">
+								<li class="add_hashtag">
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag_more"><span>0 More</span></div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="work_item_last_status">
+							<div class="status_title">Request Rejected By Amit Kumar</div>
+							<p>Install configurration failed on recursive testing</p>
+						</div>
+					</div>
+				</div>
+				<div class="row row_border">
+					<div class="col-md-2">
+						<div class="work-item-stat" data-icon="circle-icon icon-defect"  data-dimension="40" data-text="" data-info="Defect" data-width="5" data-fontsize="12" data-percent="55" data-fgcolor="#6dbc26" data-bgcolor="#d5d5d5" data-fill="#edf0f0"></div>
+					</div>
+					<div class="col-md-4">
+						<div class="work_item_title" title="<div class='clearfix'><div class='status_counts pull-left'><div class='status_count active'><h4>12</h4><p>Defects</p></div><div class='status_count active'><h4>10</h4><p>Defects</p></div></div><div class='pull-right'><div class='last_status_count '><p>added in last 1 hour</p></div></div>" data-html="true" rel="tooltip">
+							<div class="heading" onclick="show_inline_pannel(this);" ><span class="icons icon-Open"></span> Monthly PSR not loading </div>
+						</div>
+						<div class="hashtag_items">
+							<ul class="clearfix">
+								<li class="add_hashtag">
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="work_item_last_status">
+							<div class="status_title">Request Rejected By Amit Kumar</div>
+							<p>Install configurration failed on recursive testing</p>
+						</div>
+					</div>
+				</div>
+				<div class="row row_border">
+					<div class="col-md-2">
+						<div class="work-item-stat" data-icon="circle-icon icon-defect"  data-dimension="40" data-text="" data-info="Defect" data-width="5" data-fontsize="12" data-percent="55" data-fgcolor="#6dbc26" data-bgcolor="#d5d5d5" data-fill="#edf0f0"></div>
+					</div>
+					<div class="col-md-4">
+						<div class="work_item_title" title="<div class='clearfix'><div class='status_counts pull-left'><div class='status_count active'><h4>12</h4><p>Defects</p></div><div class='status_count active'><h4>10</h4><p>Defects</p></div></div><div class='pull-right'><div class='last_status_count '><p>added in last 1 hour</p></div></div>" data-html="true" rel="tooltip">
+							<div class="heading" onclick="show_inline_pannel(this);" ><span class="icons icon-Open"></span> Monthly PSR not loading </div>
+						</div>
+						<div class="hashtag_items">
+							<ul class="clearfix">
+								<li class="add_hashtag">
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="work_item_last_status">
+							<div class="status_title">Request Rejected By Amit Kumar</div>
+							<p>Install configurration failed on recursive testing</p>
+						</div>
+					</div>
+				</div>
+				<div class="row row_border hidden_content">
+					<div class="col-md-2">
+						<div class="work-item-stat" data-icon="circle-icon icon-defect"  data-dimension="40" data-text="" data-info="Defect" data-width="5" data-fontsize="12" data-percent="55" data-fgcolor="#6dbc26" data-bgcolor="#d5d5d5" data-fill="#edf0f0"></div>
+					</div>
+					<div class="col-md-4">
+						<div class="work_item_title" title="<div class='clearfix'><div class='status_counts pull-left'><div class='status_count active'><h4>12</h4><p>Defects</p></div><div class='status_count active'><h4>10</h4><p>Defects</p></div></div><div class='pull-right'><div class='last_status_count '><p>added in last 1 hour</p></div></div>" data-html="true" rel="tooltip">
+							<div class="heading" onclick="show_inline_pannel(this);" ><span class="icons icon-Open"></span> Monthly PSR not loading </div>
+						</div>
+						<div class="hashtag_items">
+							<ul class="clearfix">
+								<li class="add_hashtag">
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+								<li><div class="hashtag"><span>Release 09</span></div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="work_item_last_status">
+							<div class="status_title">Request Rejected By Amit Kumar</div>
+							<p>Install configurration failed on recursive testing</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_more_link">
+				<span class="divider"><a class="result_more_btn">1 More</a></span>
+				<span class="divider showlesscontent"><a class="result_show_less_btn">Show Less</a></span>
+				<span><a class="result_see_all_btn">See All</a></span>
+			</div>
+		</div>
+	</div>
+	<!--end of Result when we click on search button of navbar-->
+</nav>
