@@ -68,6 +68,14 @@
 				.title_comment{
 					font-size:12px;
 					color:#666666;
+					.more_link{
+						a{
+							float:right;
+							color:@brand-color;
+							font-size:12px;
+							cursor:pointer;
+						}
+					}
 				}
 			}
 			.upload_list{
@@ -81,18 +89,31 @@
 				background:#ffffff;
 				z-index:1;
 				.error_msg{
-					display:none;
+					.existing_file_names_list_error_msg{
+						display:none;
+					}
 					.error{
 						margin: 0;
 						padding: 0;
-						background: red;
-						
+						background: #eb3c37;
+						span.icon-Exclamation{
+							display: inline-block;
+							font-size: 20px;
+							color: #ffffff;
+							float: left;
+							margin: 5px;
+						}
 						h3{
 							padding:10px;
 							color:#ffffff;
+							display:inline-block;
+							a{
+								margin-left:60px;
+								color:#ffffff;
+							}
 						}
 						p{
-							
+							margin-left:30px;
 							span, a{
 								display:inline-block;
 								color:#ffffff;
@@ -108,6 +129,7 @@
 						}
 					}
 					.existing_file_names_list{
+						background:#ffe8e8;
 						li{
 							border-bottom:1px solid #ccc;
 							padding-bottom:5px;
@@ -120,6 +142,17 @@
 								}
 							}
 						}
+					}
+					.size_limit{
+						h3{
+							margin-left:16px;
+						}
+					}
+				}
+				.size_limit_error_msg{
+					display:none;
+					.size_limit_exceds{
+						background:#ffe8e8;
 					}
 				}
 				ul{
@@ -192,9 +225,18 @@
 		}
 		.heading_comment{
 			display:inline-block;
-			margin-left:110px;
+			
 			text-align:left;
-			 
+			
+			.title_comment{
+				
+				p{
+					display:table;
+					span{
+						display:table-cell;
+					}
+				}
+			} 
 		}
 	}
 	/********end of Comment********/
@@ -234,6 +276,7 @@
 						color: #666666;
 						margin-left:0;
 						cursor:default;
+						border: 1px solid #6fb3b6;
 						a{
 							margin-left:20px;
 							color:#5c5c5c;
@@ -242,6 +285,7 @@
 					li:first-child{
 						background:#ffffff;
 						margin-top:3px;
+						border:0;
 						a{
 							margin-left:0;
 							cursor:default;
@@ -250,10 +294,15 @@
 						}
 					}
 					li:last-child{
+						border:0;
 						background:none;
+						opacity:0;
 						span{
 							cursor:pointer;
 						}
+					}
+					.route_hidden_hashtag_popups{
+						color:@brand-color;
 					}
 				}
 			}
@@ -262,19 +311,21 @@
 				border:0;
 				background:none;
 				padding-top:3px;
-				padding-bottom:0;
+				padding-bottom:2px;
 				.hashtag{
 					margin:0;
 					cursor:pointer;
 				}
 				ul{
 					li:first-child{
+						border: 1px solid #6fb3b6;
 						background:#cce9eb;
 						margin-top:0;
 						margin-right:5px;
 					}
 					li:last-child{
 						background:none;
+						opacity:1;
 						a{
 							margin-left:0;	
 							color:#00929c;
@@ -436,3 +487,13 @@
 }	
 
 /**********end of search_member route popups************/
+ul.selected_hashtag_list{
+	height:60px;
+	overflow-y:scroll;
+	li{
+		margin-bottom:10px;
+	}
+	li:last-child{
+		opacity: 1;
+	}
+}	

@@ -6,10 +6,11 @@ body{
 
 .cocontainer {
 	position:relative;
-  margin-top: 50px;
-  .first_half_container {
-    margin-bottom: 12px;
-  }
+  	margin-top: 60px;
+  	.first_half_container {
+    	margin-bottom: 12px;
+
+  	}
 }
 .filter-button{
 	position:absolute;
@@ -93,6 +94,7 @@ body{
 	//bottom border for row
 	.row_border{
 		border-bottom: 1px solid #b7b9b9;
+		position:relative;
 		// defect text
 		.work_item_status {
 			margin-top:15px;
@@ -136,7 +138,7 @@ body{
 		.comments_box{
 			display:table;
 			width:100%;
-			height:90px;
+			height:100px;
 			.comments{
 				margin:15px 0;
 				display:table-cell;
@@ -159,6 +161,9 @@ body{
 		
 		
 		
+	}
+	.row_border.active{
+		background:#f7f7f7;
 	}
 	.remove_row_border{
 		border: 0px solid #b7b9b9;
@@ -217,17 +222,18 @@ body{
 					h4{
 						border:0;
 						padding:0;
-						text-align:left;
+						text-align:center;
 					}
 					p{
 						color:#bebebe;
-						text-align:left;
+						text-align:center;
 						padding-top:5px;
 						font-weight:400;
 						font-size:12px;
 					}
 					p.bold{
 						font-weight:600;
+						text-align:center;
 					}
 				}
 				
@@ -280,7 +286,7 @@ body{
 /**************end of container_class****************/
 .pin_item{
 	position:absolute;
-	right:10px;
+	right:0px;
 	top:0px;
 	width: 0;
 	height: 0;
@@ -299,7 +305,8 @@ body{
 .arrow_button{
 	border:1px solid @button-border-color;
 	border-top:0;
-	width:23px;
+	width:27px;
+	height:25px;
 	background:@arrow-button-background;
 	text-align:center;
 	
@@ -356,20 +363,27 @@ body{
 	margin:15px auto 22px;
     max-width: 1007px;
 	position: relative;
+	border:1px solid @row-border;
+	.inline_menu_container{
+		border-bottom:1px solid @row-border;
+	}
 	.status_counts{
-		margin-top:15px;
+		margin-top:10px;
+	}
+	.multiselect{
+		margin:0;
 	}
 }
 .footer{
 	background:@footer;
-	height:30px;
+	height:40px;
     width: 100%;
     position: fixed;
     bottom: 0;
-	
+	z-index:9;
 		.footer_link{
 			text-align:center;
-			padding-top:7px;
+			padding-top:11px;
 
 			.first_three_link{
 				color:@footer-link;
@@ -469,7 +483,9 @@ body{
 					}
 					.bottom_date_of_box{
 						margin-top:4px;
-						margin-left:26px;
+						font-size: 12px;
+						font-weight: 400;
+						text-align:center;
 						
 					}				
 					
@@ -494,9 +510,42 @@ body{
 						text-align:left;
 						width:822px;
 						background:#F7F7F7;
+						.oneday_block, .weekdays_block{
+							float:left;
+						}
+						.oneday_block{
+							margin-left:10px;
+							border-left:1px solid @row-border;
+							height:55px;
+						}
 						.inline_block{
 							display:inline-block;
 							padding-bottom:6px;
+							margin-left:10px;
+							a.prev_icon{
+								position:relative;
+								top:15px;
+							}
+							input{
+								width: 94px;
+								font-size: 15px;
+								height:50px;
+								border:0;
+								border-radius:0;
+								text-align:center;
+								color:#000;
+							}
+							.time_entry_status_box.datepicker{
+								width:96px;
+								height:52px;
+								border-radius:0;
+								text-align:center;
+								vertical-align:middle;
+								line-height:50px;
+								.icons{
+									color:#d8d8d8;
+								}
+							}
 						}
 						h1{
 							font-size:12px;
@@ -520,8 +569,7 @@ body{
 					.first_status{
 						font-size:26px;
 						font-weight:400;
-						padding:5px 0px;
-						margin-left:19px;
+						padding:0px 0px;
 						background:@language-container;
 					}
 					.middle_four_status{
@@ -539,13 +587,20 @@ body{
 				li.active{
 					background:@inline-action-active;
 					margin-left:0;
+					
 					.inline_action_tab{
-						
+						width:10%;
 						float:left;
-						
+						min-width:80px;
+						transition:all 1s;
+						-webkit-transition:all 1s;
+						-moz-transition:all 1s;
 						a, p{
 							color:@active-status;
 						}
+					}
+					.inline_action_tab_content{
+						width:90%;
 					}
 				}
 			}
@@ -633,8 +688,9 @@ body{
 				position:absolute;
 				height:185px;
 				top:0;
-				lefe:0;
+				left:0;
 				width:100%;
+				z-index:1;
 			}
 			.tab-pane.btn_only{
 				padding:0;
@@ -646,6 +702,7 @@ body{
 			}
 			.below_buttons_padding{
 				padding-bottom:10px;
+				background:#3e404b;
 			}
 
 			
@@ -662,10 +719,19 @@ body{
 				margin-bottom:10px;
 				height:38px;
 				display:none;
+				a.icon-Exclamation{
+					font-size: 24px;
+					color: #fff;
+					margin-left: 10px;
+					position: relative;
+					top: 5px;
+					margin-right: 10px;
+				}
 				p{
-					font-size:16px;
+					font-size:14px;
 					color:@filter-panel-error-text;
 					padding:9px 0;
+					display:inline-block;
 				}
 			}
 			.toggle_filter_panel{
@@ -885,11 +951,13 @@ body{
 			border-bottom:1px solid @row-border;
 		}
 	.subpanel{
+		overflow:hidden;
+		padding:0 10px;
 		.subpanel_heading{
 			margin:0px;
 			border-bottom:1px solid @row-border;
 			h4{
-				padding:10px 0 10px 5px;
+				padding:10px 0 10px 0px;
 				font-size:12px;
 				font-weight:600;
 				float:left;
@@ -913,7 +981,7 @@ body{
 			}
 		}
 		.subpanel_body{
-			padding:5px 10px;
+			padding:5px 0px;
 			.iconsL {
   
 				font-size: 19px;
@@ -947,11 +1015,13 @@ body{
 	list-style:none;
 	li{
 		float:left;
-		
-		padding:10px;
+		margin:0 10px;
 		a{
+			padding:10px 0;
 			color:@status-count;
 			text-decoration:none;
+			cursor:pointer;
+			display:block
 		}
 	}
 	li.active{
@@ -1046,6 +1116,34 @@ svg{
 .workflow_progress_scrollist{
 	height:275px;
 	overflow:auto;
+}
+.workflow_progress_stage_panel{
+	.panel-body{
+		.chart_panel{
+			.subpanel{
+				padding:0;
+			} 
+			.workfloaw_progress_comment_panel{
+				.arrow_box{
+					left:-10px;
+					background:none;
+					.comments_list{
+						padding:0 5px;
+					}
+				}
+				.arrow_box:before{
+					border-right-color: @row-border;
+					left:-25px;
+					border-width:12px;
+				}
+				.arrow_box:after{
+					border-right-color: #FFFFFF;
+					left:-23px;
+					border-width:12px;
+				}
+			}
+		}
+	}
 }
 .workflow_progress_stages{
 	.workflow_progress_stage{
@@ -1155,7 +1253,8 @@ svg{
 	padding:0;
 	.arrow_box{
 		margin:33px 5px 5px 0px;
-		left:-10px;
+		left:-20px;
+		overflow:visible;
 	}
 }
 .comments_details{
@@ -1336,7 +1435,7 @@ sup {
 }
 
 .add_comment{
-	margin:5px 0;
+	margin:5px;
 	input[type="text"]{
 		font-size:12px;
 	}
@@ -1456,6 +1555,15 @@ sup {
 		li{
 			float:left;
 		}
+		li:last-child{
+			.hashtag_more{
+				span{
+					color:@brand-color;
+					cursor:pointer;
+				}
+			}
+		}
+		
 		.add_hashtag{
 			width:auto;
 			margin:0px;
@@ -1513,9 +1621,10 @@ sup {
 		}
 		.hashtag{ 
 			background:#ebfaf7;
-			padding:3px 4px;
+			padding:3px 2px;
 			margin:0 0 0 5px;
 			border:1px solid #6fb3b6;
+			font-size:11px;
 			a{
 				cursor:pointer;
 				padding:3px;
@@ -1533,6 +1642,16 @@ sup {
 		}
 	}
 }
+.row_border{
+	.hashtag_items{
+		ul{
+			li:last-child{
+				opacity:0;
+			}
+		}		
+	}	
+}
+
 .project_details{
 	margin:5px 0;
 	.project_status{
@@ -1561,12 +1680,12 @@ sup {
 	margin-top:4px;
 	// 3 box border
 	.span_border{
-		border: 1px solid #b7b9b9;
-		padding:5px;
-		color:#b7b9b9;
-		font-size:12px;
+		border: 1px solid #6fb3b6;
+		padding:3px 2px;
+		font-size: 11px;
 		font-weight:400;
 		display:inline-block;
+		background:#ebfaf7;
 	}
 	//3 box space
 	.box_padding{
@@ -1575,22 +1694,22 @@ sup {
 }
 
 .icon-DownArrow{
-	background:url(../images/sprite.png) 5px -68px no-repeat;
+	background:url(../images/sprite.png) 7px -68px no-repeat;
 	width:22px;
 	height:23px;
 	display:inline-block;
 }
 .icon-DownArrow.open{
-	background-position:5px -51px;
+	background-position:7px -51px;
 }
 .icon-UpArrow{
-	background:url(../images/sprite.png) 5px -51px no-repeat;
+	background:url(../images/sprite.png) 7px -51px no-repeat;
 	width:22px;
 	height:23px;
 	display:inline-block;
 }
 .icon-UpArrow.open{
-	background-position:5px -68px;
+	background-position:7px -68px;
 }
 .static_info{
 	margin-top:10px;
@@ -1609,7 +1728,6 @@ sup {
 }
 
 /************************navbar search Result**********************/
-
 /************************end of navbar search Result**********************/
 .tooltip-inner{
 	.hashtag_items.tooltip_list{
@@ -1645,6 +1763,7 @@ sup {
 	}
 	
 }
+/**************************Route more click popover**************************/
 .popover{
 	top:0;
 	.hashtag_items.tooltip_list{
@@ -1688,8 +1807,217 @@ sup {
 	
 
 }
+/**************************end of Route more click popover**************************/
+/****************************************Activity log*****************************************/
+.activity_log{
+	.panel-body{
+		.calender_comment{
+			border-bottom:1px solid @row-border;
+			ul{
+				display:block;
+				float: left;
+				border-bottom:0;
+			}
+			ul.calender{
+				background:#f4f4f4;
+				li{
+					height:37px;
+					margin:0 2px;
+					a{
+						border:0;
+					}
+					a.prev_icon, a.next_icon{
+						margin-top:6px;
+					}
+				}
+				li.active{
+					padding-left:0;
+					padding-right:0;
+				}
+			}
+			ul.comment_bar{
+				float:right;
+			}
+		}
+		.left_vericle_line{
+			margin-left:20px;
+			padding-bottom:43px;
+			border-left:1px solid @row-border;
+			.activity_log_content{
+				margin-left:-12px;
+				p{
+					span{
+						display:inline-block;
+						font-weight:700;
+						color:@brand-color;
+						margin-top:10px;
+					}
+					span.square{
+						width: 8px;
+						height: 8px;
+						background: @brand-color;
+						margin-right:10px;
+						margin-left:7px;
+					}
+				}
+				
+				ul.activity_logs{
+					li{
+						list-style-type:none;
+						margin-top:15px;
+						.commenter_name{
+						display: table;
+						float: left;
+						position: relative;
+						width:35%;
+						.user_pic{
+							width: 25px;
+							float: left;
+							border-radius: 12px;						
+											
+						}
+						.name_status{
+								margin-left:30px;
+								display:inline-block;
+								word-wrap: break-word;
+  								display: block;
+								.status{
+									display:block;
+								}
+							}
+							
+						}
+						.comment_text{
+							display:inline-block;
+							float:right;
+							width:65%;
+							.date{
+								color:#959595;
+							}
+							p{
+								color:#666666;
+								margin-top:5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/****************************************End of Activity log*****************************************/
+.user_pic{
+	width: 25px;
+	float: left;
+	border-radius: 12px;						
+					
+}
+
+/******************************************Gist Summary*****************************/
+.gist_summary_panel{
+	.right_clicked_popup{
+		display:none;
+		background:#3e404c;
+		position: absolute;
+		top: 290px;
+		left: 70px;
+		border: 1px solid black;
+		width: 85px;
+		color:#fff;
+		font-weight:400;
+		font-size:12px;
+		padding:10px;
+		span{
+			color:#f3f3f3;
+			a{
+				margin-left: 10px;
+				font-size: 13px;
+				font-weight: 700;
+				color: #fefefc;
+				position: absolute;
+				top:12px;
+			}
+		}
+		.arrow-down{
+			width: 0;
+			height: 0;
+			border-left: 11px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #141318;
+			position: absolute;
+			left: 20px;
+			bottom:-10px;
+		}
+		.arrow-down2{
+			width: 0;
+			height: 0;
+			border-left: 11px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #3e404c;
+			position: absolute;
+			left: 20px;
+			bottom: -8px;
+		}
+	}
+
+	p{
+		color:#666666;
+		padding:15px
+	}
+	.heading_body{
+		.subpanel_heading{
+			padding: 7px 5px 3px 0px;
+			.commenter_name{
+				width:30%;
+				display:block;
+				float:left;
+				.name_status{
+					span{
+						font-weight:700;
+						position: relative;
+						top: 5px;
+						left: 10px;			
+					}
+				}
+			}
+			ul{
+				li:last-child{
+					span{
+						color:#959595;
+						position:relative;
+						top:7px;
+						left:-10px;
+					}
+				}
+			}
+		}
+		.subpanel_body{
+			padding:5px 0;
+		}
+	}
+	ul{
+		li{
+			margin:0 8px;
+		}
+	}
+	
+}
+/******************************************end of Gist Summary*****************************/
+
 .left_arrow_icon{
 	background:url("../images/left_arrow.png") no-repeat;
+	width:22px;
+	height:22px;
+	display:block;
+}
+.prev_icon{
+	background:url("../images/sprite.png") 7px 6px no-repeat;
+	width:22px;
+	height:22px;
+	display:block;
+}
+.next_icon{
+	background:url("../images/sprite.png") -27px 6px no-repeat;
 	width:22px;
 	height:22px;
 	display:block;
@@ -1741,7 +2069,7 @@ sup {
 .first_half_container{
 	.more_button_container{
 		position:relative;
-		margin-bottom:35px;
+		margin-bottom:20px;
 	}
 }
 
@@ -1753,14 +2081,171 @@ sup {
 	display:block;
 	transition:all 1s;
 }
-*{
-	  -webkit-animation: accordionIn .65s 0s ease-in-out both 1;
-  animation: accordionIn .65s 0s ease-in-out both 1;
-}
 
 .filtertabsdata{
 	display:none;
 }
 .filtertabsdata.active{
 	display:block;
+}
+
+.inline_menu_container{
+	background:#f7f7f7;
+	.inline_action_row{
+		display:block;
+		border:0;
+
+		.inline_action_pannel{
+			ul{
+				li:first-child{
+					visibility:hidden;
+				}
+			}
+		}
+	}	
+}
+.container{
+	position:relative;
+}
+/****************************Header Notification******************************/
+.header_notification{
+	display:none;
+	padding: 5px 5px;
+	position: absolute;
+	background: #ef9800;
+	top: 5px;
+	width: 98%;
+	left:0;
+	margin:0 1%;
+	z-index:9999;
+	p{
+		color:#ffffff;
+		position:relative;
+		padding-right:20px;
+	}
+	a{
+		color:#ffffff;
+	}
+	a.icon-Flag{
+		font-size:27px;
+		text-decoration:none;
+		margin-left:10px;
+	}
+	.notification_table{
+		display:table;
+		width:100%;
+		a, p{
+			display:table-cell;
+			vertical-align:top;
+			
+		}
+		p{
+			padding-left:5px;
+		}
+	}
+	.notification_action{
+		display: inline;
+		position: relative;
+		top: 5px;
+		a{
+			font-size:13px;
+		}
+		a:first-child{
+			margin-right:20px;
+			margin-left:70px;
+		}
+	}
+	a.icon-Close{
+		position:absolute;
+		right:10px;
+		top:13px;
+		font-weight: 700;
+	}
+
+}
+/****************************End of Header Notification******************************/
+
+/* #### Mobile Phones  #### */
+@media screen and (max-width: 480px){
+	.container{
+		width:100% !important;
+	}
+	.status_counts {
+		.status_count{
+			margin-right:5px;
+			h4{
+				font-size:23px;
+			}
+		}
+		.status_count.active {
+			h4{
+				font-size:23px;
+			}
+		}
+	}
+	.multiselect{
+		margin-bottom:15px;
+	}
+	.filtertabsdata{
+		margin-right:40px;
+	}
+	.header_notification {
+		.notification_action {
+			a:first-child {
+				margin-left:25px;
+			}
+		}
+	}
+}
+
+.time_entry_status_box{
+	input{
+		color:#fff;
+	}
+}	
+.inline_action_row .inline_action_pannel ul li .inline_action_tab_content .inline_block .form-control.datepicker{
+	color:#ffffff;
+	input{
+		opacity:0;
+		position:absolute;
+	}
+}
+
+*{
+	outline: 0;
+}
+a, a:active, a:focus {
+	outline: none;
+}
+a::-moz-focus-inner {border:0;}
+
+#myModal_route{
+	.modal-content{
+		 .route_popup_hashtag_list{
+			.hashtag{
+				cursor:pointer;
+			}
+		 }
+	}
+}
+
+.widgets_view{
+	.row_border{
+		border:0;
+	}
+}
+.widget_box{
+	.widget_panel{
+		box-shadow:2px 2px 4px #ccc;
+	}
+}
+
+.scroll_container{
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.navbar-inverse{
+	.navbar-collapse, .navbar-form{
+
+	}	
 }

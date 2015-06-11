@@ -6,3 +6,34 @@
 		max-width:100%;
 	}
 }
+@media (max-width: 450px){
+	.navbar-header{
+		.navbar-brand{
+			display:none;
+		}
+	}
+	.navbar-toggle.collapsed{
+		display:none;
+	}
+	.navbar-nav{
+		margin-top:0;
+		margin-bottom:0;
+	}
+	#navbar{
+		display:block;
+		visibility:visible;
+	}
+	.nav>li{
+		float:left;
+	}
+	.container_class .row_border .comments_box{
+		height:55px;
+		.comments{
+			a{
+				border-left:1px solid @row-border;
+				padding-left:15px;
+			}
+			
+		}
+	}
+}

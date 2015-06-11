@@ -9,34 +9,28 @@
     top: 0;
     width: 100%;
     z-index: 999;
-	
+	padding:5px 0;
 	.navbar-brand{
-      padding: 6px 10px;
+      padding: 8px 10px 6px 10px;
 	}
 	.navbar-nav{
+		
 		li{
 			a{
 				font-size:25px;
-				padding:15px 10px;
+				padding:15px 10px; 
 			}
 			a:hover{
 				background: @active-nav-link;	
 			}
-			a.icon-Search:hover{
-				//background:white;	
-			}
-			.badge{
-				position:absolute;
-				top:7px;
-				left: 22px;
-				background:@notification-badge;
-				border-color:@notification-badge-border;
-                padding: 0;
-                font-size: 11px;
-                width: 16px;
-                height: 16px;
-                border-radius: 8px;
-                line-height: 17px;
+			a.active{
+				background: white;
+				line-height: 0;
+				color: #00929c;
+				top: 8px;
+				left:-1px;
+				border: 1px solid #d7d7d7;
+				border-left:0;
 			}
 			
 			.icon-MinimizeWindow{
@@ -85,7 +79,7 @@
 			}
 		}
 		.search_box:hover .inputbox{
-			display:block;
+			//display:block;
 		}
 		
 		.inputbox{
@@ -136,19 +130,29 @@
 					width: 26px;
 					height: 26px;
 					border-radius:50%;
+					margin-right:7px;
 				}
 			}
-			a.icon-Minimize{
+			a.icons{
 				font-size:20px;
 				padding:15px 5px;
 			}
 
 		}
+		li.dropdown{
+			a{
+				.icon-Down-Arrow{
+					position:relative;
+					top:2px;
+				}
+			}
+		}
 		.dropdown-menu{
 			padding-top:0;
 			padding-bottom:0;
 			width: 100%;
-
+			position:absolute;
+			top:48px;
 			li{
 				a{
 					padding:10px;
@@ -220,23 +224,8 @@
 				position: relative;
 				display: block;
 			}
-			li:last-child {
-				border-top: 1px solid @menu-title-border;
-				a{
-					color: @selectall;	
-				}
-			}
-			li:last-child:before {
-				content: "";
-			    width: 0px;
-			    height: 0px;
-			    background-color: @bullet-color;
-			    float: left;
-			    top: 0px;
-				position: relative;
-				display: block;
-
-			}
+			
+			
 			li:first-child{
 				padding-left: 0px;
 				border-bottom:1px solid @menu-title-border;
@@ -259,6 +248,27 @@
 			}
 
 		}
+		.col-md-3:nth-child(3) {
+    		ul{
+    			li:last-child {
+					border-top: 1px solid @menu-title-border;
+					a{
+						color: @selectall;	
+					}
+				}
+				li:last-child:before {
+					content: "";
+				    width: 0px;
+				    height: 0px;
+				    background-color: @bullet-color;
+				    float: left;
+				    top: 0px;
+					position: relative;
+					display: block;
+				}
+    		}
+		}
+
 		ul.menu_items.sections{
 			margin:0;
 			padding:0;
@@ -311,5 +321,17 @@
 	color: #ffffff;
 }
 
-
-
+.header_notification_count{
+	position: absolute;
+	left: 25px;
+	top: 2px;
+	font-size: 12px;
+	background: red;
+	border-radius: 10px;
+	min-width: 20px;
+	text-align: center;
+	font-size: 10px;
+	height: 20px;
+	line-height: 19px;
+	vertical-align: middle;
+}

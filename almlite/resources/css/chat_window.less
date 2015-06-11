@@ -1,25 +1,273 @@
+/******************chat window inline action*********************/
+.chatbox{
+	position:relative;
+	float:left;
+	width:350px;
+	box-shadow:0px 0px 10px #b7b9b9;
+	display:block; 	
+	z-index:2;
+	background:#edf0f0;
+}
+.chat_inline_action{
+	display:block;
+	float:left;
+	position: relative;
+	right: 0;
+	top: 0;
+	min-width: 350px;
+	box-shadow:0px 0px 10px #b7b9b9;
+	border-bottom:2px solid #b7b9b9;
+	background: #ffffff;
+	bottom: 0;
+	z-index:1;
+	.my_workitems{
+		overflow-y: scroll;
+		.row_border {
+			.work_item_title{
+				margin-top:0;
+				padding:10px 0;
+			}
+		}
+	}
+	.work_item_title{
+		margin-left:15px;
+	}
+	
+	.home_tab{
+		ul{
+			border-bottom: 1px solid @row-border;
+			border-top: 1px solid @row-border;
+			padding:10px 0 0 0;
+			li{
+				display:inline-block;
+				margin-left:60px;
+				text-align:center;
+
+				a{
+					text-decoration:none;
+					font-size:12px;
+					padding:0;
+					color:@chat-window-tab-link;
+					cursor:pointer;
+					display:block;
+					padding-bottom:10px;
+					font-size:24px;
+				}
+			}
+			li.active a,li.active span {
+				color: #00929c;
+			}
+			li:first-child{
+				position: absolute;
+				border: 1px solid @row-border;
+				padding: 5px;
+				left: 0;
+				top: 21px;
+				border-left: 0;
+				margin-left:0;
+			}
+
+		}
+	
+	}
+	.home_tab_content{			
+		.chat_box_navbar{
+			ul{
+				border-bottom: 1px solid @row-border;
+				border-top: 1px solid @row-border;
+				padding:10px 0 0 0;
+				li{
+					display:inline-block;
+					margin-left:15px;
+
+					a{
+						text-decoration:none;
+						font-size:12px;
+						padding:0;
+						color:@chat-window-tab-link;
+						cursor:pointer;
+						display:block;
+						padding-bottom:10px;
+						font-weight: 700;
+					}
+				}
+				
+			}
+		}
+		.history{
+			//padding: 10px 0 10px 0px;
+			background:#ffffff;
+			width:100%;
+			position:relative;
+			
+			.history_tab{
+				cursor:pointer;
+				padding: 10px 0 10px 0px;
+				background:#f7f7f7;
+			}
+			a{
+				font-size:20px;
+				color:@icons-color;
+				margin-left:8px;
+				float:left;
+			}
+			span{
+				display:block;
+				float:left;
+				line-height: 22px;
+				margin-left: 5px;
+			}
+			.my_workitems{
+				background:#ffffff;
+				height:200px;
+				overflow-y:scroll;
+				margin-top:3px;
+			}
+		}
+		
+
+	}
+	
+	.searh_box{
+		padding: 10px;
+		.inputbox{
+			border:1px solid @search-box-border;
+			position:relative;
+			input[type="text"]{
+				background:none;
+				padding:5px;
+				width:100%;
+				border:0;
+				color:@search-box;
+			}
+			span{
+				position:absolute;
+				right:5px;
+				top:5px;
+				font-size:18px;
+				color:@search-box;
+			}
+			
+		}
+		.search_result{
+			display:none;
+			position: absolute;
+			background: #fff;
+			width: 94%;
+	  		border-top: 0;
+			z-index: 01;
+			border: 1px solid @row-border;
+			box-shadow: 4px 4px 13px rgb(173, 165, 165);
+			padding-bottom:10px;
+			border-top:0;
+		.my_workitems{
+			height:250px;
+			.row_border{
+				padding-left:0;
+			}
+		}
+		h1{
+			font-size: 14px;
+			border-bottom: 1px solid @row-border;
+			padding-left: 15px;
+			padding-bottom: 10px;
+		}
+		.more_link{
+			text-align:center;
+			color:@brand-color;
+			border-top:1px solid @row-border;
+			padding-top:10px;
+			span{
+				cursor:pointer;
+			}
+			span:last-child{
+				border-left:1px solid @row-border;
+				padding-left: 10px;
+				margin-left: 10px;
+			}
+		}	
+		}
+	}
+	.arrow{
+		background:url(../images/sprite.png) no-repeat -34px 0;
+		display:inline-block;
+		width:6px;
+		height:11px;
+		//position:absolute;
+		top: 25px;
+		left: 10px;
+	}
+	.arrow.active{
+		background:url(../images/sprite.png) no-repeat 0 0;
+	}
+	.work_item_title {
+		margin-top:15px;
+	}
+	.heading{
+		display:inline-block;
+	}
+	p.count
+	{
+		display:inline-block;
+		position: absolute;
+		min-width: 17px;
+		text-align: center;
+		background:@brand-color;
+		color:#ffffff;
+		top:2px;
+		font-size:11px;
+		span{
+			width: 0; 
+			height: 0; 
+			border-top: 0px solid transparent;
+			border-bottom:8px solid transparent;
+			border-left: 6px solid @brand-color;
+			bottom: -8px;
+			left: 4px;
+			position:absolute;
+		}
+
+	}
+}
+/******************end of chat window inline action*********************/
+
+
 /****** Chat window *******/
 .chat_window{
 	position: fixed;
-	right: 0;
+	right: -702px;
 	top: 0;
-	left:100%;
-	margin-top:50px;
-	min-width: 350px;
-	border-left:2px solid #b7b9b9;
+	margin-top:60px;
+	max-width: 702px;
+	
 	border-bottom:2px solid #b7b9b9;
 	background: #edf0f0;
 	bottom: 0;
 	.open_chat_panel{
-		background:#ffffff;
+		background:@brand-color;
+		color:#ffffff;
 		padding:5px;
-		position:absolute;
-		left: -39px;
+		position:fixed;
+		right: 0px;
 		top:45%;
 		font-size:26px;
 		border:1px solid #ccc;
 		text-decoration:none;
 		cursor:pointer;
+		span{
+			position: absolute;
+			left: -7px;
+			top: -11px;
+			font-size: 12px;
+			background: red;
+			padding: 2px;
+			border-radius: 10px;
+			height: 20px;
+			width: 20px;
+			line-height: 15px;
+			display:block;
+			text-align:center;
+		}
 	}
 	.chat_container{
 		padding-left:15px;
@@ -28,19 +276,121 @@
 	.white_chat_box{
 		background:@chat-white-box;
 		.member_count{
-			padding:10px 15px;
+			padding:7px 15px 2px;
+			border-bottom: 1px solid @row-border;
 			.count{
 				font-weight:700;
 				font-size:12px;
-				padding-bottom:10px;
+				.next_icon {
+					background: url(../images/sprite.png) -27px 6px no-repeat;
+					width: 22px;
+					height: 18px;
+					display: inline-block;
+					top: 0px;
+					position: relative;
+					top: 2px;
+				}
+				a.active{
+					background: url(../images/sprite.png) 0 -33px no-repeat;
+				}
+			}
+			.add_member{
+				position: relative;
+				top: -7px;
+				span.add_icon{
+					font-size: 22px;
+					position: relative;
+					top: 3px;
+					padding-right:5px;
+				}
+			}
+			span{
+				cursor:pointer;
 			}
 		}
+		.add_member_popup{
+			box-shadow: 4px 7px 7px #b7b9b9;
+			border: 1px solid @row-border;
+			//margin:10px;
+			margin-top:3px;
+			position: absolute;
+			display: none;
+			width: 100%;
+			background: #fff;
+			z-index: 2;
+			.member_list{
+				display:block;
+			}
+			.top_arrow{
+				width: 0;
+				height: 0;
+				position: absolute;
+				border-left: 8px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: 35px solid #ffffff;
+				top: -23px;
+				right: 40px;
+			}
+			.inputbox{
+				padding: 10px 15px;
+				input{
+					padding: 5px;
+					width: 100%;
+				}
+			}
+			.heading{
+				padding:10px 15px;
+				border-top:1px solid @row-border;
+				border-bottom:1px solid @row-border;
+			}
+			.buttons{
+				text-align: center;
+				border-top: 1px solid @row-border;
+				padding-bottom: 5px;
+			}
+		}
+		.add_member_popup:before{
+			content: "";
+			position: absolute;
+			/* bottom: -12px; */
+			/* left: 265px; */
+			border-width: 0px 6px 36px 8px;
+			border-style: solid;
+			border-color: @row-border transparent;
+			display: block;
+			width: 16px;
+			right: 39px;
+			top: -24px;
+		}
+		.member_list{
+			display:none;	
+			padding-left:15px;
+			height:195px;
+			overflow-y:scroll;
+
+			ul{
+				li{
+					list-style:none;
+					padding-bottom:5px;
+					img{
+						border-radius: 28px;
+						width: 20px;
+						position: relative;
+						top: -2px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		
 		/****** white container navbar*******/
 		.chat_box_navbar{
 			ul{
 				border-bottom: 1px solid @row-border;
 				border-top: 1px solid @row-border;
 				padding:10px 0 0 0;
+				top:-1px;
+				position:relative;
 				li{
 					display:inline-block;
 					margin-left:15px;
@@ -66,16 +416,56 @@
 
 			}
 		}
+		.range_calender{
+			background:#f7f7f7;
+			.calender{
+				padding: 15px 0 10px 20px;
+				.from_date{
+					display:inline-block;
+					span.first{
+						background:#ffffff;
+						border: 1px solid #898989;
+						margin: 5px 10px 10px 0;
+						font-size: 12px;
+						text-align:center;
+						padding-top:5px;
+						input{
+							width: 85px;
+							height: 35px;
+							border:0;
+						}
+					}
+					span{
+						display:block;
+						color:#666666;
+						margin-left:5px;
+					}
+				}
+			}
+			ul{
+				li.active a {
+					color: #00929c;
+					border: 0;
+					border-bottom:0;
+					font-weight: 700;
+					background: 0 0;
+				}
+
+			}
+		}
 		/******end of  white container navbar*******/
 		/****** comment lists*******/
 		.comment_list{
+			padding-right:10px;
+			h2{
+				margin-left: 15px;
+				font-size: 12px;
+				font-weight: 700;
+				margin-top: 7px;
+			}
 			overflow-y: scroll;
 			.chat_comment{
 				margin-top:20px;
-				h2{
-					font-weight:400;
-					padding-left: 15px;
-				}
 				.comment_box{
 					margin-top:5px;
 					padding:10px 10px;
@@ -83,17 +473,109 @@
 					border:1px solid @row-border;
 					position: relative;
 					border-radius: 0px;
+					.img_box{
+						width:30px;
+						height:30px;
+						border-radius:15px;
+						overflow:hidden;
+						display:block;
+						float:left;
+						img{ 
+							width:100%;
+						}
+					}
 					.name{
 						font-weight:700;
 						font-size:12px;
+						float:left;
+						display:block;
+						line-height:30px;
+						margin-left:10px;
 					}
 					.date{
 						padding-right:8px;
 						color:#b3b5b1;
+						float:left;
+						display:block;
+						a{
+							padding-right:20px;
+							color:@icons-color;
+							font-size:20px;
+							position:relative;
+							top:5px;
+						}
+						.icons{
+							text-decoration:none;
+							cursor:pointer;
+							font-size:14px;
+						}
+						.time{
+							position: relative;
+  							top: 3px;
+						}
 					}
 					.comment{
 						p{
 							padding:5px 0px 0px 0px;
+							span.upload_count{
+								position: relative;
+								display:inline-block;
+								float:left;
+								line-height:23px;
+							}
+							.arrow_i{
+								display:inline-block;
+								float:left;
+							}
+							a{
+								cursor:pointer;
+							}
+							a.active{
+								background:url(../images/sprite.png) 0px -33px no-repeat;
+							}
+						}
+						.list_popups{
+							ul.file_list{	
+								display:none;
+								li{
+									list-style:none;
+									margin-top:5px;
+									a.icon-Attachment{
+										font-size:18px;
+										color:@icons-color;
+										padding-right:5px;
+									}
+									span{
+										font-weight:700;
+									}
+									span.pull-right{
+										padding-right:15px;
+									}
+								}
+								li:last-child{
+									border-bottom:1px solid @row-border;
+									padding-bottom:10px;
+								}
+							}
+							.right_clicked_popup{
+								//display:block !important;
+								z-index:1;
+								.text{
+									ul{
+										li{
+											display:inline-block;
+											padding:10px;
+											a{
+												font-size:18px;
+												color:@icons-color;
+											}
+											span{
+												display:block;
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -119,6 +601,8 @@
 					display: block;
 					width: 0;
 				}
+
+
 				.left_arrow.comment_box:before {
 					bottom: -14px;
 					border-width: 14px 17px 0 0;
@@ -135,6 +619,66 @@
 					border-color: #f3f2fe transparent;
 				}
 			}
+			.chat_comment.count{
+				.comment_box{
+					border:1px solid @brand-color;
+					background:#f2f9ff;
+				}
+				.comment_box:before{
+					border-color: @brand-color transparent;
+				}
+				
+			}
+		}
+		.right_clicked_popup{
+			display:none;
+			background:#3e404c;
+			position: absolute;
+			top: 290px;
+			left: 70px;
+			border: 1px solid black;
+			width: 250px;
+			color:#fff;
+			font-weight:400;
+			font-size:12px;
+			h2{
+				font-weight: 400;
+				margin-left: 0;
+				border-bottom: 1px solid @row-border;
+				padding: 15px;
+				text-align: center;
+				color:#e1e1df;
+				span{
+					margin-right:3px;
+				}
+			}
+			.text{
+				color:#85868b;
+				text-align:center;
+				padding: 10px 0;
+				.checkbox{
+					margin-bottom:0;
+				}
+			}
+			.arrow-down{
+				width: 0;
+				height: 0;
+				border-left: 11px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 10px solid #141318;
+				position: absolute;
+				left: 20px;
+			}
+			.arrow-down2{
+				width: 0;
+				height: 0;
+				border-left: 11px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 10px solid #3e404c;
+				position: absolute;
+				left: 20px;
+				bottom: -8px;
+			}
 		}
 		/****** end of comment lists*******/
 	}
@@ -144,6 +688,7 @@
 		border-top:1px solid @row-border;
 		.textfield{
 			margin-top: 15px;
+			margin-bottom: 15px;
 			margin-left: 10px;
 			width: 260px;
 			border-radius:0;
@@ -160,3 +705,6 @@
 	}	
 }
 /****** end of Chat window *******/
+
+
+/************for demo only*****/
