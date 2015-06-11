@@ -16,8 +16,8 @@
 	
 	"URLs": {
 		"homeURL": "/almlite/index.jsp",
-		"menusURL": "/almlite/app/data/menus.json",
-		"inboxURL": ""
+		"menusURL": "/app/data/menus.json",
+		"inboxURL": "/app/data/workItems.json"
 	},
 	
 	"I18N": {

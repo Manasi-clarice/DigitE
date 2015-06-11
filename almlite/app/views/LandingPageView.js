@@ -6,9 +6,9 @@ define([
 	'util/Console',
 	'util/JSHelper',
 	'views/NavigationBarView',
-	'views/dashboard/MyWorkitems'
+	'views/dashboard/DashboardContainerView'
 	//'view/MainContainerView'
-], function ($, _, Backbone, GlobalEvent, Console, JSHelper, NavigationBarView, MainContainerView) {
+], function ($, _, Backbone, GlobalEvent, Console, JSHelper, NavigationBarView, DashboardContainerView) {
 	
 	var LandingPageView = Backbone.View.extend({
 		el: 'body',
@@ -22,9 +22,9 @@ define([
 		},
 		
 		render: function () {
-			alert("This is landing");
+			//alert("This is landing");
 			this.navigationBarView = new NavigationBarView().render();
-			//this.mainContainerView = new MainContainerView().render();
+			this.mainContainerView = new DashboardContainerView();
 			
 			return this;
 		}

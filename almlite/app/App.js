@@ -10,12 +10,12 @@ define([
 	
 	var initialize = function () {
 		Console.log('Application initialized.');
-		
+		new LandingPageView();
 		new Router();
 		
 		Backbone.history.start();
 		
-		new LandingPageView().render();
+
 	};
 	
 	return {
