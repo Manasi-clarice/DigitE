@@ -1,49 +1,52 @@
 <div class="row_border">
     <!--1 row-->
     <div class="row">
-        <div class="col-md-2">
-            <div class="work-item-stat" data-icon="circle-icon icon-defect"  data-dimension="40" data-text="" data-info="Defect" data-width="5" data-fontsize="12" data-percent="55" data-fgcolor="#6dbc26" data-bgcolor="#d5d5d5" data-fill="#edf0f0"></div>
+        <div class="col-md-2 col-xs-2">
+            <div class="work-item-stat circliful" data-icon="circle-icon icon-defect" data-dimension="40" data-text="" data-info="Defect" data-width="5" data-fontsize="12" data-percent="55" data-fgcolor="#6dbc26" data-bgcolor="#d5d5d5" data-fill="#edf0f0" ></div>
         </div>
-        <div class="col-md-4">
-            <div class="work_item_title" title="<div class='clearfix'><div class='status_counts pull-left'><div class='status_count active'><h4>12</h4><p>Defects</p></div><div class='status_count active'><h4>10</h4><p>Defects</p></div></div><div class='pull-right'><div class='last_status_count '><p>added in last 1 hour</p></div></div>" data-html="true" rel="tooltip">
-                <div class="heading" onclick="show_inline_pannel(this);" ><span class="icons icon-Open"></span><%= itemName %></div>
-            </div>
-            <div class="hashtag_items">
-                <ul class="clearfix">
-                    <li class="add_hashtag ">
-                        <div class="input-group"><input type="text" class="form-control" placeholder="Add Hashtag..."><span class="input-group-btn"><a id="hashtag" class="btn btn-default" type="button">+</a></span>
+
+        <div class="col-md-10 col-xs-10">
+            <div class="row">
+                <div class="col-md-5 col-xs-12">
+                    <div class="work_item_title" title="" data-html="true" rel="tooltip" data-original-title="<div class='clearfix'><div class='status_counts pull-left'><div class='status_count active'><h4>12</h4><p>Defects</p></div><div class='status_count active'><h4>10</h4><p>Defects</p></div></div><div class='pull-right'><div class='last_status_count '><p>added in last 1 hour</p></div></div>">
+                        <div class="heading" onclick="show_inline_pannel(this);"><span class="icons icon-Open"></span><%= itemName %></div>
+                    </div>
+                    <div class="hashtag_items" style="display: none;">
+                        <ul class="clearfix">
+                            <li class="add_hashtag "><div class="input-group"><input type="text" class="form-control" placeholder="Add Hashtag..." maxlength="7"><span class="input-group-btn"><a id="hashtag" class="btn btn-default" type="button">+</a></span>
+                            </div>
+                            </li>
+                            <li><div class="hashtag"><span>Virtusa</span><a class="icons icon-Close"></a></div></li>
+                            <li><div class="hashtag"><span>Release 09</span><a class="icons icon-Close"></a></div></li>
+                            <li><div class="hashtag_more"><span>0 More</span></div></li>
+                        </ul>
+                    </div>
+                    <div class="project_details">
+
+                        <span class="project_entity"><%= itemCode %></span>
+                        <span class="project_entity"><%= projectName %></span>
+                        <span class="project_entity"><%= stage %></span>
+                    </div>
+                </div>
+                <div class="col-md-7  col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <div class="work_item_last_status" style="margin: 5px 0;">
+                                <div class="status_title">Request <%= lastCommentType %> By <%= lastCommentBy %></div>
+                                <p><%= lastcomment%></p>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="hashtag"><span>Release 09</span><a class="icons icon-Close"></a></div>
-                    </li>
-                    <li>
-                        <div class="hashtag"><span>Release 09</span><a class="icons icon-Close"></a></div>
-                    </li>
-                    <li>
-                        <div class="hashtag_more"><span>0 More</span></div>
-                    </li>
-                </ul>
+                        <div class="col-md-3  col-xs-3">
+                            <div class="comments_box">
+                                <div class="comments"><a class="icon-Comments"></a>  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project_details">
-                <span class="project_entity"><%= itemCode %></span>
-                <span class="project_entity"><%= projectName %></span>
-                <span class="project_entity"><%= stage %></span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="work_item_last_status">
-                <div class="status_title">Request <%= lastCommentType %> By <%= lastCommentBy %></div>
-                <p><%= lastcomment%></p>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="comments_box">
-                <div class="comments"><a class="icon-Comments"></a>  </div>
-            </div>
-            <div class="pin_item"> <a class="icon-Pin"></a> </div>
         </div>
     </div>
+    <div class="pin_item"> <a class="icon-Pin"></a></div>
     <!--1 row end-->
     <div class="inline_action_row">
         <div class="row">
@@ -52,37 +55,82 @@
                     <ul>
                         <li>
                             <div class="left_arrow">
-                                <a class="icon-Left-Arrow"><img src="resources/images/left_arrow.png"/></a>
+                                <a class="icon-Left-Arrow"><img src="./images/left_arrow.png"/></a>
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-Attachment"></a>
+                            <div class="inline_action_tab"> <a class="icon-Attachment"></a>
                                 <p>Attachment</p>
                             </div>
                             <div class="inline_action_tab_content">
                                 <div class="attachment">
                                     <div class="step_1 clearfix">
                                         <div class="pull-left upload">
-                                            <input type="file" size="10" />
-                                            <a class=""><img src="resources/images/attachment_add.png"/></a>
+                                            <input type="file" size="10" multiple/>
+                                            <a class=""><img src="images/attachment_add.png"/></a>
                                         </div>
                                         <div class="pull-left file_list_container">
-                                            <div class="heading dd_container" >
+                                            <div class="heading dd_container" style="display:none;" >
                                                 <p>To attach files drag & drop here</p>
                                             </div>
-                                            <div class="heading upload_list" >
+                                            <div class="heading upload_list" style="display:block;" >
                                                 <div class="error_msg">
-                                                    <div class="error">
-                                                        <h3>File name matches existing attachment</h3>
-                                                        <p><span>Replace All</span><a>Yes</a><a>No</a><a>Keep Both</a></p>
+                                                    <div class="existing_file_names_list_error_msg">
+                                                        <div class="error">
+                                                            <span class="icon-Exclamation"></span>
+                                                            <h3><span class="exist_count">0</span> File name matches existing attachment</h3>
+                                                            <p><a>Replace All</a><a>Yes</a><a>No</a><a>Keep Both</a></p>
+                                                        </div>
+                                                        <div class="existing_file_names">
+                                                            <ul class="existing_file_names_list">
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <div class="existing_file_names">
-                                                        <ul class="existing_file_names_list">
-                                                        </ul>
+                                                    <div class="size_limit_error_msg">
+                                                        <div class="error">
+                                                            <h3><span class="size_exced_count">0</span>
+                                                                Attachment Size can't be more than 800 MB
+                                                                <a class="icons icon-Close"></a></h3>
+                                                        </div>
+                                                        <div class="size_limit_exceds">
+                                                            <ul class="size_limit_exceds_list">
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <ul class="file_names_list">
+                                                    <li>
+                                                        <div class="file_details">
+                                                                                <span class="file_name">MI Core 4 Release   Plan.xls
+                                                                                </span>
+                                                            <span class="file_size">1.50 MB</span>
+                                                            <a class="icons icon-Close"></a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="file_details">
+                                                                                <span class="file_name">Change Requests.xls
+                                                                                </span>
+                                                            <span class="file_size">1.00 MB</span>
+                                                            <a class="icons icon-Close"></a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="file_details">
+                                                                                <span class="file_name">Defects.xls
+                                                                                </span>
+                                                            <span class="file_size">1.80 MB</span>
+                                                            <a class="icons icon-Close"></a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="file_details">
+                                                                                <span class="file_name">Estimates.xls
+                                                                                </span>
+                                                            <span class="file_size">2.00 MB</span>
+                                                            <a class="icons icon-Close"></a>
+                                                        </div>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -90,46 +138,42 @@
                                             <div class="heading_comment">
                                                 <h2>Recent Attachment</h2>
                                                 <div class="title_comment">
-                                                    <p><span>By Rohit Madhavan</span> <span>3 Hours Before</span></p>
-                                                    <p><span>By Rohit Madhavan</span> <span>3 Hours Before</span></p>
+                                                    <p><span>By Rakesh Ahuja</span> <span>3 Hours Before</span></p>
+                                                    <div class="more_link">
+                                                        <a>2 More</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="step_2 clearfix" style="display:none;">
-                                        <div class="pull-left">
-                                            <p>Attachment size cannot be more than 800 MB</p>
-                                        </div>
+                                        <div class="pull-left"><p>Attachment size cannot be more than 800 MB</p></div>
                                         <div class="pull-left"><a>X</a></div>
                                     </div>
                                     <div class="step_3 clearfix" style="display:none;">
-                                        <div class="pull-left">
-                                            <p>Attachment already present with same name,do you wish to overwrite</p>
-                                        </div>
+                                        <div class="pull-left"><p>Attachment already present with same name,do you wish to overwrite</p></div>
                                         <div class="pull-left"><a>Yes</a><a>No</a><a>Keep both</a></div>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-Comment_2"></a>
+                            <div class="inline_action_tab"> <a class="icon-Comment_2"></a>
                                 <p>Comment</p>
                             </div>
                             <div class="inline_action_tab_content">
                                 <div class="comment">
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <div class="title_commentbox ">
                                             <h2><span class="required">*</span>Add Comment</h2>
                                             <div class="textarea"><textarea class="form-control"></textarea></div>
                                         </div>
                                     </div>
-                                    <div class=" pull-left">
+                                    <div class="col-md-7">
                                         <div class="heading_comment">
-                                            <h2>Recent Attachment</h2>
+                                            <h2>Recent Comments</h2>
                                             <div class="title_comment">
-                                                <p><span>By Rohit Madhavan</span> <span>3 Hours Before</span></p>
-                                                <p><span>By Rohit Madhavan</span> <span>3 Hours Before</span></p>
+                                                <p><span>By Rohit Madhavan</span> <span>Install Configuration failed on recursive testing. Please verify the output of the SAHI scripts with the previous release</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -137,8 +181,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-Route"></a>
+                            <div class="inline_action_tab"> <a class="icon-Route"></a>
                                 <p>Route</p>
                             </div>
                             <div class="inline_action_tab_content ">
@@ -149,20 +192,19 @@
                                             <div class="hashtag_items route_hashtag_items">
                                                 <ul class="clearfix">
                                                     <li class="add_hashtag"><a>To:</a></li>
-                                                    <li class="hashtag"><span>Rahul</span><a class="icons icon-Close"></a></li>
-                                                    <li class="hashtag"><span>Atul</span><a class="icons icon-Close"></a></li>
-                                                    <li class="hashtag"><span>Amol</span><a class="icons icon-Close"></a></li>
+                                                    <li class="hashtag"><span>Nicholas L.</span><a class="icons icon-Close"></a></li>
+                                                    <li class="hashtag"><span>Nischal S.</span><a class="icons icon-Close"></a></li>
+                                                    <li class="hashtag"><span>Paul Adams</span><a class="icons icon-Close"></a></li>
                                                     <li class="hashtag" style="cursor:pointer;">
-                                                                                    <span class="route_hidden_hashtag_popups" data-container="body" data-toggle="popover" data-placement="right" data-html="true"
-                                                                                          data-content='<div class="hashtag_items tooltip_list"><p>To:</p><ul class="clearfix"><li class="hashtag"><span>Rahul</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rahul</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rahul</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rahul</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rahul</span><a class="icons icon-Close"></a></li></ul><div class="tooltip_footer"><a>Add More</a></div></div>' data-toggle="popover" data-html="true" rel="tooltip">0 More</span>
-                                                    </li>
+																		<span class="route_hidden_hashtag_popups" data-container="body" data-toggle="popover" data-placement="right" data-html="true"
+                                                                              data-content='<div class="hashtag_items tooltip_list"><p>To:</p><ul class="clearfix"><li class="hashtag"><span>Rakesh</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rakesh</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rakesh</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rakesh</span><a class="icons icon-Close"></a></li><li class="hashtag"><span>Rakesh</span><a class="icons icon-Close"></a></li></ul><div class="tooltip_footer"><a>Add More</a></div></div>' data-toggle="popover" data-html="true" rel="tooltip">0 More</span></li>
                                                 </ul>
                                             </div>
                                             <div class="hashtag_items clearfix route_hashtag_items  more_hashtag_items pull-right">
                                                 <ul class="clearfix">
-                                                    <li class="hashtag"><span>Mukund 1</span></li>
-                                                    <li class="hashtag"><span>Vikas Patil</span></li>
-                                                    <li class="hashtag"><span><a data-toggle="modal" data-target="#myModal_route">6 more</a></span></li>
+                                                    <li class="hashtag"><span>Perry C.</span></li>
+                                                    <li class="hashtag"><span>Peter C</span></li>
+                                                    <li class="hashtag"><span><a data-toggle="modal" data-target="#myModal_route">27 more</a></span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -177,26 +219,24 @@
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-Reject"></a>
+                            <div class="inline_action_tab"> <a class="icon-Reject"></a>
                                 <p>Reject</p>
                             </div>
                             <div class="inline_action_tab_content ">
                                 <div class="reject">
                                     <div class="title_commentbox ">
                                         <h2>Add New</h2>
-                                        <div class="textarea"><textarea class="form-control"></textarea></div>
+                                        <div class="textarea"><textarea class="form-control">Workitem will get routed to Review stage:</textarea></div>
                                     </div>
                                     <div class="title_commentbox ">
                                         <h2><span class="required">*</span>Add Comment</h2>
-                                        <div class="textarea"><textarea class="form-control"></textarea></div>
+                                        <div class="textarea"><textarea class="form-control">Workitem will get rejected to Initiator stage:</textarea></div>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-Trace "></a>
+                            <div class="inline_action_tab"> <a class="icon-Trace "></a>
                                 <p >Trace</p>
                             </div>
                             <div class="inline_action_tab_content ">
@@ -204,14 +244,14 @@
                                     <p>Traced Work Entities -</p>
                                     <ul>
                                     </ul>
-                                    <div class="entity"><span class="work_entity">Work Entity - 1</span> <span class="work_defect">DEF21</span><span class="work_defect">Infosys Implementation</span><span class="approve">Approve</span><span class="approve_date">21st Jan 15</span></div>
-                                    <div class="entity"><span class="work_entity">Work Entity - 2</span> <span class="work_defect">DEF21</span><span class="work_defect">Infosys Implementation</span><span class="approve">Approve</span><span class="approve_date">21st Jan 15</span></div>
+                                    <div class="entity"><span class="work_entity">Column Sorter in Report is not working</span> <span class="work_defect">DEF21</span><span class="work_defect"> Rockwell Implementation </span><span class="approve">Impact Analysis</span></div>
+                                    <div class="entity"><span class="work_entity">Refresh icon is not visible completely</span> <span class="work_defect">DEF22</span><span class="work_defect"> Rockwell Implementation </span><span class="approve">Reviewer</span></div>
+                                    <div class="entity"><span class="work_entity">User needs to tap twice to edit past hours</span> <span class="work_defect">ISS101</span><span class="work_defect">  TimeOut App Rollout  </span><span class="approve">Approver</span></div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-Share"></a>
+                            <div class="inline_action_tab"> <a class="icon-Share"></a>
                                 <p>Share</p>
                             </div>
                             <div class="inline_action_tab_content ">
@@ -234,8 +274,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab" >
-                                <a class="icon-Block"></a>
+                            <div class="inline_action_tab" > <a class="icon-Block"></a>
                                 <p>Block</p>
                             </div>
                             <div class="inline_action_tab_content ">
@@ -248,48 +287,67 @@
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab">
-                                <a class="icon-TimeEntry"></a>
+                            <div class="inline_action_tab"> <a class="icon-TimeEntry"></a>
                                 <p>Time Entry</p>
                             </div>
-                            <div class="inline_action_tab_content ">
-                                <!--<img src="resources/images/time_entry.png">-->
+                            <div class="inline_action_tab_content clearfix">
+                                <!--<img src="./images/time_entry.png">-->
                                 <h1> Select Date</h1>
-                                <div class="inline_block">
-                                    <div class="time_entry_status_box first_status">-Hours-</div>
-                                    <div class="bottom_date_of_box">
-                                        <p>01-01-15  l  Mon</p>
+                                <div class="weekdays_block">
+                                    <div class="inline_block">
+                                        <div class="time_entry_status_box first_status"><input type="text" class="form-control" value="" placeholder="-Hours-" /></div>
+                                        <div class="bottom_date_of_box">
+                                            <p>01-06-2015 | Mon</p>
+                                        </div>
+                                    </div>
+                                    <div class="inline_block">
+                                        <div class="time_entry_status_box first_status"><input type="text" class="form-control" value="" placeholder="-Hours-" /></div>
+                                        <div class="bottom_date_of_box">
+                                            <p>02-06-2015 | Tue</p>
+                                        </div>
+                                    </div>
+                                    <div class="inline_block">
+                                        <div class="time_entry_status_box first_status"><input type="text" class="form-control" value="" placeholder="-Hours-" /></div>
+                                        <div class="bottom_date_of_box">
+                                            <p>03-06-2015 | Wed</p>
+                                        </div>
+                                    </div>
+                                    <div class="inline_block">
+                                        <div class="time_entry_status_box first_status"><input type="text" class="form-control" value="" placeholder="-Hours-" /></div>
+                                        <div class="bottom_date_of_box">
+                                            <p>04-06-2015 | Thur</p>
+                                        </div>
+                                    </div>
+                                    <div class="inline_block">
+                                        <div class="time_entry_status_box first_status"><input type="text" class="form-control" value="" placeholder="-Hours-" /></div>
+                                        <div class="bottom_date_of_box">
+                                            <p>05-06-2015 | Fri</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oneday_block">
+                                    <div class="inline_block">
+                                        <div class="time_entry_status_box first_status"><input type="text" class="form-control" value="" placeholder="-Hours-" /></div>
+                                        <div class="bottom_date_of_box">
+                                            <p>06-06-2015 | Sat</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="inline_block">
-                                    <div class="time_entry_status_box middle_four_status">08</div>
-                                    <div class="bottom_date_of_box">
-                                        <p>01-01-15  l  Mon</p>
-                                    </div>
+                                    <a class="prev_icon"></a>
                                 </div>
                                 <div class="inline_block">
-                                    <div class="time_entry_status_box middle_four_status">08</div>
-                                    <div class="bottom_date_of_box">
-                                        <p>01-01-15  l  Mon</p>
-                                    </div>
-                                </div>
-                                <div class="inline_block">
-                                    <div class="time_entry_status_box middle_four_status">08</div>
-                                    <div class="bottom_date_of_box">
-                                        <p>01-01-15  l  Mon</p>
-                                    </div>
-                                </div>
-                                <div class="inline_block">
-                                    <div class="time_entry_status_box middle_four_status">08</div>
-                                    <div class="bottom_date_of_box">
-                                        <p>01-01-15  l  Mon</p>
+                                    <div class="time_entry_status_box first_status datepicker form-control">
+                                                            <span class="input-daterange" id="daterange">
+                                                                <input type="text">
+                                                            </span>
+                                        <i class="icons icon-Date"></i>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="inline_action_tab" onclick="location.href='work_item_details.html'" >
-                                <a class="icon-View"></a>
+                            <div class="inline_action_tab" onclick="location.href='work_item_details.html'" > <a class="icon-View"></a>
                                 <p>View</p>
                             </div>
                         </li>
@@ -300,3 +358,4 @@
     </div>
     <!--end of inline action row-->
 </div>
+<!--row_border clss end-->
