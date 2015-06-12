@@ -4,7 +4,8 @@
 		"dataFor": "priority",
 		"summaryItems": [{
 			"count": 37,
-			"text": "Defects"
+			"text": "Defects",
+		  "itemType" : ""
 		},{
 			"count": 18,
 			"text": "Issues"

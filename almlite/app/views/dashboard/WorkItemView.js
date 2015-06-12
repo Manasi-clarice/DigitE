@@ -9,7 +9,7 @@ define([
     'models/workItem/WorkItem'
 ], function ($, _, Backbone, GlobalEvent,a_workItemTemplate, Console, JSHelper, WorkItem) {
 
-    var MyWorkItemView = Backbone.View.extend({
+    var WorkItemView = Backbone.View.extend({
             el :"",
             template : _.template(a_workItemTemplate),
             initialize : function(){
@@ -21,5 +21,5 @@ define([
             }
     });
 
-   return MyWorkItemView;
+   return WorkItemView;
 });

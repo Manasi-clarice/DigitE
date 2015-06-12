@@ -6,11 +6,11 @@ define([
 	'text!templates/dashboard/myWorkItems.html',
     'util/Console',
     'util/JSHelper',
-    'views/dashboard/MyWorkItemView',
+    'views/dashboard/WorkItemView',
     'collections/workItems/WorkItems'
-], function ($, _, Backbone, GlobalEvent,a_workItemsTemplate, Console, JSHelper, MyWorkItemView, WorkItems) {
+], function ($, _, Backbone, GlobalEvent,a_workItemsTemplate, Console, JSHelper, WorkItemView, WorkItems) {
 
-    var MyWorkItemsView = Backbone.View.extend({
+    var WorkItemsView = Backbone.View.extend({
     el : ".work-items",
 
     template : _.template(a_workItemsTemplate),
@@ -27,15 +27,7 @@ define([
     },
     render : function(){
         this.$el.html(this.template);
-
-
-        //var w_container = this.$el.find(".my_workitems");
-       /* var w_myWorkItems = new WorkItems();
-        			var me = this;
-        			w_myWorkItems.fetch();
-*/
-//        			_.forEach(w_myWorkItems,this.appendWorkItem,this);
-            this.collection.each(this.appendWorkItem,this);
+        this.collection.each(this.appendWorkItem,this);
 
         return this;
     },
@@ -43,12 +35,12 @@ define([
     appendWorkItem : function (workItem){
         console.log("Work Item Model ....");
         console.log(workItem);
-        var workItemView = new MyWorkItemView({model : workItem});
+        var workItemView = new WorkItemView({model : workItem});
         this.$el.find(".my_workitems").append(workItemView.el);
     }
 
 
     });
 
-    return MyWorkItemsView;
+    return WorkItemsView;
 });

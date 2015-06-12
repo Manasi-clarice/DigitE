@@ -6,11 +6,11 @@ define([
 	'text!templates/dashboard/dashboard.html',
     'util/Console',
     'util/JSHelper',
-    'views/dashboard/MyWorkItemsView',
+    'views/dashboard/WorkItemsView',
     'collections/workItems/WorkItems'
-], function ($, _, Backbone, GlobalEvent,a_dashboardTemplate, Console, JSHelper, MyWorkItemsView, WorkItems) {
+], function ($, _, Backbone, GlobalEvent,a_dashboardTemplate, Console, JSHelper, WorkItemsView, WorkItems) {
 
-    var DashboardContainerView = Backbone.View.extend({
+    var MainContainerView = Backbone.View.extend({
     el : ".dashboard-container",
 
     template : _.template(a_dashboardTemplate),
@@ -22,11 +22,11 @@ define([
     		},
     render : function(){
         this.$el.html(this.template);
-        new MyWorkItemsView({collection: this.myWorkItemsList});
+        new WorkItemsView({collection: this.myWorkItemsList});
         return this;
     }
 
     });
 
-    return DashboardContainerView;
+    return MainContainerView;
 });
