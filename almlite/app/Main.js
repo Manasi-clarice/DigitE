@@ -3,7 +3,7 @@ require.config({
 	
 	paths: {
 		jquery: '../lib/jquery/dist/jquery',
-		bootstrap: '../lib/bootstrap/bootstrap.min',
+		bootstrap: '../lib/bootstrap/dist/js/bootstrap.min',
 		underscore: '../lib/underscore/underscore',
 		Backbone: '../lib/backbone/backbone',
 		text: '../lib/text/text',
