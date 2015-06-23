@@ -1,0 +1,29 @@
+{
+  "filters": [
+    {
+      "id": "F1",
+      "text": "Priority",
+      "name": "priority",
+      "hasAdvancedFilter": false,
+      "isActive": true
+    }, {
+      "id": "F2",
+      "text": "Due Date",
+      "name": "due-date",
+      "hasAdvancedFilter": false,
+      "isActive": false
+    }, {
+      "id": "F3",
+      "text": "Date Identified",
+      "name": "date-identified",
+      "hasAdvancedFilter": false,
+      "isActive": false
+    }, {
+      "id": "F4",
+      "text": "Project",
+      "name": "project",
+      "hasAdvancedFilter": true,
+      "isActive": false
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-	"ulClassName": ""
+	"ulClassName": "",
 	"filters": [{
 		"filterId": "priorityFilter",
 		"text": "Priority",

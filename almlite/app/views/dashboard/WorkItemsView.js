@@ -15,18 +15,20 @@ define([
 
     template : _.template(a_workItemsTemplate),
     initialize: function () {
-    console.log("My Work Items");
-    var me = this;
-    this.collection.fetch({
-        success : function(){
-            me.render();
-        }
-    });
-    console.log(this.collection);
-        //this.render();
+        console.log("My Work Items");
+        var me = this;
+        //ToDo: Filters to be fetched
+        this.collection.fetch({
+            success : function(){
+                me.render();
+            }
+        });
+        console.log(this.collection);
+            //this.render();
     },
     render : function(){
         this.$el.html(this.template);
+        // First fetch
         this.collection.each(this.appendWorkItem,this);
 
         return this;

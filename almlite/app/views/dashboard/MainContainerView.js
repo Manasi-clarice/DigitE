@@ -22,6 +22,8 @@ define([
     		},
     render : function(){
         this.$el.html(this.template);
+        //Load the filters section for inbox.
+        // then
         new WorkItemsView({collection: this.myWorkItemsList});
         return this;
     }

@@ -40,8 +40,8 @@ var mountFolder = function (connect, dir) {
         connect: {
             server: {
               options: {
-                port: 9001,
-                target: 'http:/localhost:9001/',
+                port: 8080,
+                target: 'http:/localhost:8080/',
                 base: 'almlite',
                 livereload : LIVERELOAD_PORT,
                 keepalive : true,

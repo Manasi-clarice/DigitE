@@ -8,9 +8,10 @@ define ([
 
     var WorkItems = Backbone.Collection.extend({
         model : WorkItem,
-        url: JSHelper.getURL('inboxURL'),
+
         parse: function (a_responseJSON) {
         			return a_responseJSON.myWorkItems;
+
         		}
     });
 

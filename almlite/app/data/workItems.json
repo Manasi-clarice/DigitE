@@ -1,13 +1,13 @@
 {
   "myWorkItems": [{
     "projectId": "hidden",
-    "projectName": "Infosys Implementaion",
+    "projectName": "1. Infosys Implementaion",
     "itemType": "w_itemType - internal to be kept\t(DFT, CHR)",
     "itemTypeName": "Defect",
     "itemId": "w_itemid - internal",
     "itemCode": "DEF123",
     "itemName": "Error Encountered on Refresh",
-    "priority": "w_priority - display\t\t(Inner circle)",
+    "priority": "#c90001",
     "stage": "Performer",
     "dueDate": "w_duDate - display label",
     "receivedDate": "w_receivedDate - display label",
@@ -28,7 +28,7 @@
     "itemId": "w_itemid - internal",
     "itemCode": "DEF123",
     "itemName": "Error Encountered on Refresh",
-    "priority": "w_priority - display\t\t(Inner circle)",
+    "priority": "#e99400",
     "stage": "Performer",
     "dueDate": "w_duDate - display label",
     "receivedDate": "w_receivedDate - display label",
@@ -41,5 +41,5 @@
     "lastCommentType": "Rejected",
     "lastCommentBy": "Amit Kumar",
     "isPinned": "Y/N"
-  }]
+  } ]
 }

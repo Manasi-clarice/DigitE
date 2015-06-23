@@ -22,8 +22,8 @@ define([
 		},
 		
 		initialize: function () {
-			 console.log('loging template');
-			 console.log(this.template);
+//			 console.log('loging template');
+//			 console.log(this.template);
 		},
 		
 		showMenus: function () {

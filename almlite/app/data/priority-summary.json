@@ -1,0 +1,25 @@
+{
+  "summary":[
+    {
+      "count" : "50",
+      "text" : "Critical",
+      "name" : "critical",
+      "isActive" : true
+    },{
+      "count" : "03",
+      "text" : "High",
+      "name" : "high",
+      "isActive" : false
+    },{
+      "count" : "01",
+      "text" : "Medium",
+      "name" : "medium",
+      "isActive" : false
+    },{
+      "count" : "03",
+      "text" : "Low",
+      "name" : "low",
+      "isActive" : false
+    }
+  ]
+}

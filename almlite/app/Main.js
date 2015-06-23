@@ -7,6 +7,7 @@ require.config({
 		underscore: '../lib/underscore/underscore',
 		Backbone: '../lib/backbone/backbone',
 		text: '../lib/text/text',
+		circliful: '../lib/circliful/js/jquery.circliful',
 	}
 });
 
