@@ -43,16 +43,18 @@ define([
         },
 
         updateSummary : function(eventOptions){
-            this.collection.each(function(a_summaryItem){
-                if(a_summaryItem.get('name') == eventOptions.model.get('name')){
-                    a_summaryItem.set('isActive',true);
-                }else{
-                    a_summaryItem.set('isActive', false);
-                }
+            if(this.container == eventOptions.container){
+                this.collection.each(function(a_summaryItem){
+                    if(a_summaryItem.get('name') == eventOptions.model.get('name')){
+                        a_summaryItem.set('isActive',true);
+                    }else{
+                        a_summaryItem.set('isActive', false);
+                    }
 
-            },this);
-            this.$el.html('').unbind();
-            this.render();
+                },this);
+                this.$el.html('').unbind();
+                this.render();
+            }
         },
         render : function(){
             this.$el.html(this.summaryItemsTemplate);

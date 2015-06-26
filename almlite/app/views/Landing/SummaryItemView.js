@@ -17,7 +17,7 @@ define([
             this.render();
         },
         render :function (){
-            this.$el.append(this.template(this.model.toJSON()));
+            this.$el.append(this.template(_.extend({containerName : this.container},this.model.toJSON())));
             if(this.model.get('isActive') == true){
                 var eventOptions = {container : this.container, model : this.model};
                // GlobalEvent.trigger("updateSummaryApplied",eventOptions);
@@ -28,8 +28,10 @@ define([
         fetchWorkItems : function(e){
             var eventOptions = {container : this.container, model : this.model};
             var targetHtml =  $(e.target).parent(".status_count").find("p").text();
+            var temp = $(e.target).parent(".status_count")[0].getAttribute("name");
+
             var compareToInnerHtml = this.model.get('text');
-            if(targetHtml == compareToInnerHtml) {
+            if(this.container == temp && targetHtml == compareToInnerHtml) {
 
                 GlobalEvent.trigger("ChangeWorkItems",eventOptions);
                 GlobalEvent.trigger("updateSummaryApplied",eventOptions);

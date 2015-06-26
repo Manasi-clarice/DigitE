@@ -24,6 +24,19 @@
       "name": "project",
       "hasAdvancedFilter": true,
       "isActive": false
+    },{
+      "id": "F5",
+      "text": "Queue",
+      "name": "queue",
+      "hasAdvancedFilter": true,
+      "isActive": false
+    },{
+      "id": "F6",
+      "text": "Item Type",
+      "name": "item-type",
+      "hasAdvancedFilter": true,
+      "isActive": false
     }
+
   ]
 }

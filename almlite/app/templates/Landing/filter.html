@@ -1,10 +1,11 @@
 <li class="filter-tab">
     <a
+        tab-content="<%=name%>"
         <% if(isActive == true){%> class="active"
         <%}%>   >   <%= text%>
     </a>
     <% if(hasAdvancedFilter == true){%>
-    <span  class="arrow"></span>
+    <span  tab-content="<%=name%>" class="arrow"></span>
     <%}%>
 
 </li>

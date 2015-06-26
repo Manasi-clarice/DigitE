@@ -24,7 +24,8 @@ define([
     render : function(){
         this.$el.html(this.template);
         var workItems = this.myWorkItemsList;
-        new WorkItemsView({collection: workItems, el:".work-items"},"inbox-items");
+        new WorkItemsView({collection: workItems, el:".work-items"},"work-items", "My Workitems");
+        new WorkItemsView({collection: workItems,el: ".buzzing-items"},"buzzing-items", "Buzzing at Digite");
         return this;
     }
 

@@ -25,21 +25,20 @@ var WorkItemsView = Backbone.View.extend({
     initialize: function (overrides,name) {
         this.name = name;
         var me = this;
-       /* var datasource = 'inboxURL';
-        this.collection.fetch({
-            success : function(){
-                me.render();
-            },
-            url: JSHelper.getURL(datasource)
-        });*/
+
         me.render();
         GlobalEvent.on("ChangeWorkItems",this.summaryClickWorkItems, this);
         GlobalEvent.on("setSelectedFilter",this.setSelectedFilter, this);
     },
     showFilterPanel : function(event){
+
         if(this.filtersView){
             this.filtersView.show(event);
+            GlobalEvent.trigger("closeFilterPanel",this.name);
+            //console.log(this.name);
         }
+
+
     },
 
     summaryClickWorkItems : function(eventOptions){
