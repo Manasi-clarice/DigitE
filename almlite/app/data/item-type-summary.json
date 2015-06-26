@@ -1,0 +1,25 @@
+{
+  "summary":[
+    {
+      "count" : "04",
+      "text" : "Defects",
+      "name" : "defects",
+      "isActive" : true
+    },{
+      "count" : "03",
+      "text" : "Issues",
+      "name" : "issues",
+      "isActive" : false
+    },{
+      "count" : "01",
+      "text" : "Action Items",
+      "name" : "ActionItems",
+      "isActive" : false
+    },{
+      "count" : "03",
+      "text" : "Tasks",
+      "name" : "tasks",
+      "isActive" : false
+    }
+  ]
+}

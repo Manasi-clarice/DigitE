@@ -1,0 +1,23 @@
+{
+  "inlineFilters": [{
+    "id" : "i1",
+    "text" : "SAP Phase-II Integration"
+  },{
+    "id" : "i2",
+    "text" : "SAP Phase-II Integration"
+
+  },{
+    "id" : "i3",
+    "text" : "SAP Phase-II Integration"
+  },{
+    "id" : "i4",
+    "text" : "SAP Phase-II Integration"
+  },{
+    "id" : "i5",
+    "text" : "SAP Phase-II Integration"
+  },{
+    "id" : "i6",
+    "text" : "SAP Phase-II Integration"
+  }
+  ]
+}

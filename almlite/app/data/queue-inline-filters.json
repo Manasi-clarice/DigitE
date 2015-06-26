@@ -1,0 +1,23 @@
+{
+  "inlineFilters": [{
+    "id" : "q1",
+    "text" : "Defect"
+  },{
+    "id" : "q2",
+    "text" : "Change Request"
+
+  },{
+    "id" : "q3",
+    "text" : "Risk"
+  },{
+    "id" : "q4",
+    "text" : "Issue"
+  },{
+    "id" : "q5",
+    "text" : "Lorem Epsum"
+  },{
+    "id" : "q6",
+    "text" : "Lorem Epsum Dolor Set"
+  }
+  ]
+}

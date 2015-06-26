@@ -1,0 +1,23 @@
+{
+  "inlineFilters": [{
+    "id" : "p1",
+    "text" : "SAP Phase-II Integration"
+    },{
+    "id" : "p2",
+    "text" : "XOR 2.2. Maintenance"
+
+    },{
+    "id" : "p3",
+    "text" : "Juniper Program"
+    },{
+    "id" : "p4",
+    "text" : "SAP Phase-II Integration"
+  },{
+    "id" : "p5",
+    "text" : "Mobile App Support"
+  },{
+    "id" : "p6",
+    "text" : "Angular JS Research"
+  }
+  ]
+}
